@@ -1,0 +1,50 @@
+record(stringin, "$(P)$(R)Version_RBV") {
+    field(DESC, "Version")
+    field(DTYP, "stream")
+    field(INP,  "@scanivalveDts4050.proto getString(VER, VERSION:) $(PORT)")
+    field(PINI, "YES")
+}
+
+record(bo, "$(P)$(R)StartScan") {
+    field(DESC, "Start Scan")
+    field(DTYP, "stream")
+    field(OUT,  "@scanivalveDts4050.proto startScan() $(PORT)")
+}
+
+record(bo, "$(P)$(R)StopScan") {
+    field(DESC, "Stop Scan")
+    field(DTYP, "stream")
+    field(OUT,  "@scanivalveDts4050.proto sendCommand(STOP) $(PORT)")
+}
+
+record(bo, "$(P)$(R)SendTrigger") {
+    field(DESC, "Send Trigger")
+    field(DTYP, "stream")
+    field(OUT,  "@scanivalveDts4050.proto sendCommand(TRIG) $(PORT)")
+}
+
+record(longout, "$(P)$(R)ScanTrigger") {
+    field(DESC, "Scan Trigger")
+    field(DTYP, "stream")
+    field(OUT,  "@scanivalveDts4050.proto setInteger(XSCANTRIG) $(PORT)")
+    field(DRVL, "0")
+    field(DRVH, "254")
+    #field(FLNK, "$(P)$(R)GetScanVars_RBV PP")
+}
+
+record(longin, "$(P)$(R)ScanTrigger_RBV") {
+    field(DESC, "Scan Trigger")
+}
+
+record(bi, "$(P)$(R)GetScanVars_RBV") {
+    field(DTYP, "stream")
+    field(INP,  "@scanivalveDts4050.proto getScanVariables($(P)$(R)) $(PORT)")
+    field(PINI, "YES")
+}
+
+record(bi, "$(P)$(R)GetScan_RBV") {
+    field(DTYP, "stream")
+    field(INP,  "@scanivalveDts4050.proto getScan($(P)$(R)) $(PORT)")
+    field(SCAN, "I/O Intr")
+    field(TPRO, "1")
+}

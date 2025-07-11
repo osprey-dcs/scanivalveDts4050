@@ -1,0 +1,4 @@
+record(ai, "$(P)$(R)$(NAME)$(N):Temp_RBV") {
+    field(DESC, "$(NAME)$(N) Temperature")
+    field(TPRO, "1")
+}
