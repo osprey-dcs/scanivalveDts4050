@@ -1,0 +1,7 @@
+record(ai, "$(P)$(R)Rtd$(N):Temp_RBV") {
+    field(DESC, "Rtd$(N) Temperature")
+    field(PREC, "2")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "stream")
+    field(INP,  "@scanivalveDts4050.proto getScanRtdTemp($(N)) $(PORT)")
+}

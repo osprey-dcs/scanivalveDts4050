@@ -13,7 +13,3 @@ A manual can be found in the [docs](docs/DTS4050_V203.pdf) folder.
 * [asyn](https://github.com/epics-modules/asyn)
 * [autosave](https://github.com/epics-modules/autosave)
 * [StreamDevice](https://github.com/paulscherrerinstitute/StreamDevice)
-
-## Theory of Operation
-
-TODO

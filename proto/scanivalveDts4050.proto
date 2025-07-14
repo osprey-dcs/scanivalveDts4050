@@ -1,110 +1,52 @@
+Terminator = "\r\n";
+
 getString {
-    out "\$1";
-    in "\$2 %#s";
+    in "\$1 %#s";
+}
+
+listVars {
+    out "LIST \$1";
+}
+
+getIntVar {
+    in "SET \$1 %d";
+}
+
+setIntVar {
+    out "SET \$1 %d";
 }
 
 startScan {
     out "SET FORMAT 0";
+    out "SET TIME 1";
     out "SCAN";
 }
 
-getScan {
-    in "Frame # %*d";
-    in "Rtd1 %(\$1Rtd1:Temp_RBV)f %*s";
-    in "Rtd2 %(\$1Rtd2:Temp_RBV)f %*s %*d";
-    in "Rtd3 %(\$1Rtd3:Temp_RBV)f %*s";
-    in "Rtd4 %(\$1Rtd4:Temp_RBV)f %*s %*d";
-    in "Rtd5 %(\$1Rtd5:Temp_RBV)f %*s";
-    in "Rtd6 %(\$1Rtd6:Temp_RBV)f %*s %*d";
-    in "Rtd7 %(\$1Rtd7:Temp_RBV)f %*s";
-    in "Rtd8 %(\$1Rtd8:Temp_RBV)f %*s %*d";
-    in "Units %*s";
-    in "01 %(\$1Ch01:Temp_RBV)f %*s";
-    in "02 %(\$1Ch02:Temp_RBV)f %*s";
-    in "03 %(\$1Ch03:Temp_RBV)f %*s";
-    in "04 %(\$1Ch04:Temp_RBV)f %*s";
-    in "05 %(\$1Ch05:Temp_RBV)f %*s";
-    in "06 %(\$1Ch06:Temp_RBV)f %*s";
-    in "07 %(\$1Ch07:Temp_RBV)f %*s";
-    in "08 %(\$1Ch08:Temp_RBV)f %*s";
-    in "09 %(\$1Ch09:Temp_RBV)f %*s";
-    in "10 %(\$1Ch10:Temp_RBV)f %*s";
-    in "11 %(\$1Ch11:Temp_RBV)f %*s";
-    in "12 %(\$1Ch12:Temp_RBV)f %*s";
-    in "13 %(\$1Ch13:Temp_RBV)f %*s";
-    in "14 %(\$1Ch14:Temp_RBV)f %*s";
-    in "15 %(\$1Ch15:Temp_RBV)f %*s";
-    in "16 %(\$1Ch16:Temp_RBV)f %*s";
-    in "17 %(\$1Ch17:Temp_RBV)f %*s";
-    in "18 %(\$1Ch18:Temp_RBV)f %*s";
-    in "19 %(\$1Ch19:Temp_RBV)f %*s";
-    in "20 %(\$1Ch20:Temp_RBV)f %*s";
-    in "21 %(\$1Ch21:Temp_RBV)f %*s";
-    in "22 %(\$1Ch22:Temp_RBV)f %*s";
-    in "23 %(\$1Ch23:Temp_RBV)f %*s";
-    in "24 %(\$1Ch24:Temp_RBV)f %*s";
-    in "25 %(\$1Ch25:Temp_RBV)f %*s";
-    in "26 %(\$1Ch26:Temp_RBV)f %*s";
-    in "27 %(\$1Ch27:Temp_RBV)f %*s";
-    in "28 %(\$1Ch28:Temp_RBV)f %*s";
-    in "29 %(\$1Ch29:Temp_RBV)f %*s";
-    in "30 %(\$1Ch30:Temp_RBV)f %*s";
-    in "31 %(\$1Ch31:Temp_RBV)f %*s";
-    in "32 %(\$1Ch32:Temp_RBV)f %*s";
-    in "33 %(\$1Ch33:Temp_RBV)f %*s";
-    in "34 %(\$1Ch34:Temp_RBV)f %*s";
-    in "35 %(\$1Ch35:Temp_RBV)f %*s";
-    in "36 %(\$1Ch36:Temp_RBV)f %*s";
-    in "37 %(\$1Ch37:Temp_RBV)f %*s";
-    in "38 %(\$1Ch38:Temp_RBV)f %*s";
-    in "39 %(\$1Ch39:Temp_RBV)f %*s";
-    in "40 %(\$1Ch40:Temp_RBV)f %*s";
-    in "41 %(\$1Ch41:Temp_RBV)f %*s";
-    in "42 %(\$1Ch42:Temp_RBV)f %*s";
-    in "43 %(\$1Ch43:Temp_RBV)f %*s";
-    in "44 %(\$1Ch44:Temp_RBV)f %*s";
-    in "45 %(\$1Ch45:Temp_RBV)f %*s";
-    in "46 %(\$1Ch46:Temp_RBV)f %*s";
-    in "47 %(\$1Ch47:Temp_RBV)f %*s";
-    in "48 %(\$1Ch48:Temp_RBV)f %*s";
-    in "49 %(\$1Ch49:Temp_RBV)f %*s";
-    in "50 %(\$1Ch50:Temp_RBV)f %*s";
-    in "51 %(\$1Ch51:Temp_RBV)f %*s";
-    in "52 %(\$1Ch52:Temp_RBV)f %*s";
-    in "53 %(\$1Ch53:Temp_RBV)f %*s";
-    in "54 %(\$1Ch54:Temp_RBV)f %*s";
-    in "55 %(\$1Ch55:Temp_RBV)f %*s";
-    in "56 %(\$1Ch56:Temp_RBV)f %*s";
-    in "57 %(\$1Ch57:Temp_RBV)f %*s";
-    in "58 %(\$1Ch58:Temp_RBV)f %*s";
-    in "59 %(\$1Ch59:Temp_RBV)f %*s";
-    in "60 %(\$1Ch60:Temp_RBV)f %*s";
-    in "61 %(\$1Ch61:Temp_RBV)f %*s";
-    in "62 %(\$1Ch62:Temp_RBV)f %*s";
-    in "63 %(\$1Ch63:Temp_RBV)f %*s";
-    in "64 %(\$1Ch64:Temp_RBV)f %*s";
+getScanFrameNum {
+    in "Frame # %d";
+}
+
+getScanFrameTimeStamp {
+    in "Time %d us";
+}
+
+getScanRtdTemp {
+    ExtraInput = Ignore;
+    in "Rtd\$1 %f %*s";
+}
+
+getScanUnits {
+    in "Units %s";
+}
+
+getScanChTemp {
+    in "\$1 %f %*s";
+}
+
+getScanChStatus {
+    in "\$1 %*f %s";
 }
 
 sendCommand {
     out "\$1";
-}
-
-setInteger {
-    out "SET \$1 %d";
-}
-
-getScanVariables {
-    out "LIST S";
-    in "SET PERIOD %*f";
-    in "SET AVG %*d";
-    in "SET FPS %*d";
-    in "SET XSCANTRIG %(\$1ScanTrigger_RBV)d";
-    in "SET FORMAT %*d";
-    in "SET TIME %*d";
-    in "SET BIN %*d";
-    in "SET QPKTS %*d";
-    in "SET UNITS %*s";
-    in "SET RANGEV %*f %*f";
-    in "SET RANGET %*f %*f";
-    in "SET RATE %*f";
 }

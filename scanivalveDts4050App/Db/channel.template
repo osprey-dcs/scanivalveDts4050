@@ -1,0 +1,14 @@
+record(ai, "$(P)$(R)Ch$(N):Temp_RBV") {
+    field(DESC, "Ch$(N) Temperature")
+    field(PREC, "2")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "stream")
+    field(INP,  "@scanivalveDts4050.proto getScanChTemp($(N)) $(PORT)")
+}
+
+record(stringin, "$(P)$(R)Ch$(N):Status_RBV") {
+    field(DESC, "Ch$(N) Status")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "stream")
+    field(INP,  "@scanivalveDts4050.proto getScanChStatus($(N)) $(PORT)")
+}

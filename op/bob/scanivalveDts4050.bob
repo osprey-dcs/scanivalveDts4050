@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-07-10 22:51:59 by bmartins-->
+<!--Saved on 2025-07-14 16:04:19 by bmartins-->
 <display version="2.0.0">
   <name>Scanivalve DTS4050 - $(P)$(R)</name>
   <macros>
     <P>SVDTS4050:</P>
     <R></R>
   </macros>
-  <width>1800</width>
+  <width>990</width>
   <height>650</height>
   <widget type="group" version="3.0.0">
     <name>Unit Info</name>
     <y>30</y>
     <width>350</width>
-    <height>70</height>
+    <height>120</height>
     <foreground_color>
       <color red="0" green="128" blue="255">
       </color>
@@ -30,8 +30,9 @@
     <widget type="label" version="2.0.0">
       <name>Label_57</name>
       <text>Version</text>
+      <x>50</x>
       <y>5</y>
-      <width>115</width>
+      <width>65</width>
       <horizontal_alignment>2</horizontal_alignment>
       <vertical_alignment>1</vertical_alignment>
       <wrap_words>false</wrap_words>
@@ -61,11 +62,70 @@
         </color>
       </border_color>
     </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_96</name>
+      <text>Status</text>
+      <y>30</y>
+      <width>115</width>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Model_3</name>
+      <pv_name>$(P)$(R)Status_RBV</pv_name>
+      <x>125</x>
+      <y>30</y>
+      <width>180</width>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_97</name>
+      <text>Status Update</text>
+      <x>5</x>
+      <y>55</y>
+      <width>115</width>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="combo" version="2.0.0">
+      <name>Combo Box</name>
+      <pv_name>$(P)$(R)Status.SCAN</pv_name>
+      <x>125</x>
+      <y>55</y>
+      <width>180</width>
+      <height>20</height>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_40</name>
     <text>Scanivalve DTS4050 - $(P)$(R)</text>
-    <width>1770</width>
+    <width>990</width>
     <height>25</height>
     <font>
       <font name="Header 2" family="Liberation Sans" style="BOLD" size="18.0">
@@ -84,9 +144,10 @@
   </widget>
   <widget type="group" version="3.0.0">
     <name>Scan Control</name>
-    <y>100</y>
-    <width>350</width>
-    <height>129</height>
+    <x>350</x>
+    <y>30</y>
+    <width>640</width>
+    <height>120</height>
     <foreground_color>
       <color red="0" green="128" blue="255">
       </color>
@@ -112,9 +173,11 @@
       </actions>
       <pv_name>$(P)$(R)StartScan</pv_name>
       <text>Start Scan</text>
-      <x>12</x>
-      <y>10</y>
+      <x>270</x>
+      <y>5</y>
+      <height>20</height>
       <tooltip>$(actions)</tooltip>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
     </widget>
     <widget type="action_button" version="3.0.0">
       <name>Action Button_2</name>
@@ -127,9 +190,11 @@
       </actions>
       <pv_name>$(P)$(R)SendTrigger</pv_name>
       <text>Send Trigger</text>
-      <x>125</x>
-      <y>10</y>
+      <x>270</x>
+      <y>30</y>
+      <height>20</height>
       <tooltip>$(actions)</tooltip>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
     </widget>
     <widget type="action_button" version="3.0.0">
       <name>Action Button_3</name>
@@ -142,17 +207,120 @@
       </actions>
       <pv_name>$(P)$(R)StopScan</pv_name>
       <text>Stop Scan</text>
-      <x>12</x>
+      <x>270</x>
       <y>55</y>
+      <height>20</height>
       <tooltip>$(actions)</tooltip>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="group" version="3.0.0">
+      <name>Group</name>
+      <x>10</x>
+      <y>30</y>
+      <width>255</width>
+      <height>20</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="label" version="2.0.0">
+        <name>Label_99</name>
+        <text>External Trigger Div</text>
+        <width>143</width>
+        <horizontal_alignment>2</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+        <actions>
+        </actions>
+        <border_color>
+          <color red="0" green="128" blue="255">
+          </color>
+        </border_color>
+      </widget>
+      <widget type="textentry" version="3.0.0">
+        <name>Text Entry_1</name>
+        <pv_name>$(P)$(R)ExtTriggerDiv</pv_name>
+        <x>148</x>
+        <width>50</width>
+        <background_color>
+          <color name="Background" red="255" green="255" blue="255">
+          </color>
+        </background_color>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Model_5</name>
+        <pv_name>$(P)$(R)ExtTriggerDiv_RBV</pv_name>
+        <x>205</x>
+        <width>50</width>
+        <background_color>
+          <color red="255" green="255" blue="255">
+          </color>
+        </background_color>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+        <actions>
+        </actions>
+        <border_color>
+          <color red="0" green="128" blue="255">
+          </color>
+        </border_color>
+      </widget>
+    </widget>
+    <widget type="group" version="3.0.0">
+      <name>Group</name>
+      <x>10</x>
+      <y>5</y>
+      <width>255</width>
+      <height>20</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="label" version="2.0.0">
+        <name>Label_98</name>
+        <text>Num Avg Samples</text>
+        <width>143</width>
+        <horizontal_alignment>2</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+        <actions>
+        </actions>
+        <border_color>
+          <color red="0" green="128" blue="255">
+          </color>
+        </border_color>
+      </widget>
+      <widget type="textentry" version="3.0.0">
+        <name>Text Entry</name>
+        <pv_name>$(P)$(R)Average</pv_name>
+        <x>148</x>
+        <width>50</width>
+        <background_color>
+          <color name="Background" red="255" green="255" blue="255">
+          </color>
+        </background_color>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Model_4</name>
+        <pv_name>$(P)$(R)Average_RBV</pv_name>
+        <x>205</x>
+        <width>50</width>
+        <background_color>
+          <color red="255" green="255" blue="255">
+          </color>
+        </background_color>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+        <actions>
+        </actions>
+        <border_color>
+          <color red="0" green="128" blue="255">
+          </color>
+        </border_color>
+      </widget>
     </widget>
   </widget>
   <widget type="group" version="3.0.0">
-    <name>RTD</name>
-    <x>350</x>
-    <y>30</y>
-    <width>1120</width>
-    <height>143</height>
+    <name>Scan Readings</name>
+    <y>150</y>
+    <width>990</width>
+    <height>500</height>
     <foreground_color>
       <color red="0" green="128" blue="255">
       </color>
@@ -168,29 +336,3142 @@
     <actions>
     </actions>
     <widget type="group" version="3.0.0">
-      <name>Group</name>
-      <macros>
-        <N>1</N>
-      </macros>
-      <x>10</x>
-      <y>5</y>
-      <width>210</width>
+      <name>RTDs</name>
+      <x>90</x>
+      <y>42</y>
+      <width>835</width>
+      <height>20</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="group" version="3.0.0">
+        <name>Group</name>
+        <macros>
+          <N>1</N>
+        </macros>
+        <width>100</width>
+        <height>20</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label</name>
+          <text>$(N)</text>
+          <width>20</width>
+          <horizontal_alignment>2</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update</name>
+          <pv_name>$(P)$(R)Rtd$(N):Temp_RBV</pv_name>
+          <x>25</x>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>Group_4</name>
+        <macros>
+          <N>2</N>
+        </macros>
+        <x>105</x>
+        <width>100</width>
+        <height>20</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_4</name>
+          <text>$(N)</text>
+          <width>20</width>
+          <horizontal_alignment>2</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_4</name>
+          <pv_name>$(P)$(R)Rtd$(N):Temp_RBV</pv_name>
+          <x>25</x>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>Group_5</name>
+        <macros>
+          <N>3</N>
+        </macros>
+        <x>210</x>
+        <width>100</width>
+        <height>20</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_5</name>
+          <text>$(N)</text>
+          <width>20</width>
+          <horizontal_alignment>2</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_5</name>
+          <pv_name>$(P)$(R)Rtd$(N):Temp_RBV</pv_name>
+          <x>25</x>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>Group_6</name>
+        <macros>
+          <N>4</N>
+        </macros>
+        <x>315</x>
+        <width>100</width>
+        <height>20</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_6</name>
+          <text>$(N)</text>
+          <width>20</width>
+          <horizontal_alignment>2</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_6</name>
+          <pv_name>$(P)$(R)Rtd$(N):Temp_RBV</pv_name>
+          <x>25</x>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>Group_7</name>
+        <macros>
+          <N>5</N>
+        </macros>
+        <x>420</x>
+        <width>100</width>
+        <height>20</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_7</name>
+          <text>$(N)</text>
+          <width>20</width>
+          <horizontal_alignment>2</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_7</name>
+          <pv_name>$(P)$(R)Rtd$(N):Temp_RBV</pv_name>
+          <x>25</x>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>Group_8</name>
+        <macros>
+          <N>6</N>
+        </macros>
+        <x>525</x>
+        <width>100</width>
+        <height>20</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_8</name>
+          <text>$(N)</text>
+          <width>20</width>
+          <horizontal_alignment>2</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_8</name>
+          <pv_name>$(P)$(R)Rtd$(N):Temp_RBV</pv_name>
+          <x>25</x>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>Group_9</name>
+        <macros>
+          <N>7</N>
+        </macros>
+        <x>630</x>
+        <width>100</width>
+        <height>20</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_9</name>
+          <text>$(N)</text>
+          <width>20</width>
+          <horizontal_alignment>2</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_9</name>
+          <pv_name>$(P)$(R)Rtd$(N):Temp_RBV</pv_name>
+          <x>25</x>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>Group_10</name>
+        <macros>
+          <N>8</N>
+        </macros>
+        <x>735</x>
+        <width>100</width>
+        <height>20</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_10</name>
+          <text>$(N)</text>
+          <width>20</width>
+          <horizontal_alignment>2</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_10</name>
+          <pv_name>$(P)$(R)Rtd$(N):Temp_RBV</pv_name>
+          <x>25</x>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+      </widget>
+    </widget>
+    <widget type="group" version="3.0.0">
+      <name>Units</name>
+      <x>220</x>
+      <y>10</y>
+      <width>180</width>
       <height>20</height>
       <style>3</style>
       <transparent>true</transparent>
       <widget type="label" version="2.0.0">
-        <name>Label</name>
-        <text>RTD $(N)</text>
+        <name>Label_12</name>
+        <text>Units</text>
         <horizontal_alignment>2</horizontal_alignment>
       </widget>
       <widget type="textupdate" version="2.0.0">
-        <name>Text Update</name>
-        <pv_name>$(P)$(R)Rtd$(N):Temp_RBV</pv_name>
-        <x>110</x>
+        <name>Text Update_12</name>
+        <pv_name>$(P)$(R)ScanUnits_RBV</pv_name>
+        <x>105</x>
+        <width>75</width>
         <background_color>
           <color name="Background" red="255" green="255" blue="255">
           </color>
         </background_color>
+        <horizontal_alignment>1</horizontal_alignment>
+      </widget>
+    </widget>
+    <widget type="group" version="3.0.0">
+      <name>Frame Number</name>
+      <x>10</x>
+      <y>10</y>
+      <width>180</width>
+      <height>20</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="label" version="2.0.0">
+        <name>Label_11</name>
+        <text>Frame Number</text>
+        <horizontal_alignment>2</horizontal_alignment>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_11</name>
+        <pv_name>$(P)$(R)ScanFrame_RBV</pv_name>
+        <x>105</x>
+        <width>75</width>
+        <background_color>
+          <color name="Background" red="255" green="255" blue="255">
+          </color>
+        </background_color>
+        <horizontal_alignment>1</horizontal_alignment>
+      </widget>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_13</name>
+      <text>RTD</text>
+      <x>10</x>
+      <y>42</y>
+      <width>80</width>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="group" version="3.0.0">
+      <name>Chs01-08</name>
+      <x>10</x>
+      <y>70</y>
+      <width>915</width>
+      <height>40</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="label" version="2.0.0">
+        <name>Label_14</name>
+        <text>Channel</text>
+        <width>80</width>
+        <height>40</height>
+        <horizontal_alignment>2</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>Ch01</name>
+        <macros>
+          <N>01</N>
+        </macros>
+        <x>80</x>
+        <width>100</width>
+        <height>40</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_15</name>
+          <text>$(N)</text>
+          <width>20</width>
+          <height>40</height>
+          <horizontal_alignment>2</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_13</name>
+          <pv_name>$(P)$(R)Ch$(N):Temp_RBV</pv_name>
+          <x>25</x>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_14</name>
+          <pv_name>$(P)$(R)Ch$(N):Status_RBV</pv_name>
+          <x>25</x>
+          <y>20</y>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>Ch02</name>
+        <macros>
+          <N>02</N>
+        </macros>
+        <x>185</x>
+        <width>100</width>
+        <height>40</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_16</name>
+          <text>$(N)</text>
+          <width>20</width>
+          <height>40</height>
+          <horizontal_alignment>2</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_15</name>
+          <pv_name>$(P)$(R)Ch$(N):Temp_RBV</pv_name>
+          <x>25</x>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_16</name>
+          <pv_name>$(P)$(R)Ch$(N):Status_RBV</pv_name>
+          <x>25</x>
+          <y>20</y>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>Ch03</name>
+        <macros>
+          <N>03</N>
+        </macros>
+        <x>290</x>
+        <width>100</width>
+        <height>40</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_18</name>
+          <text>$(N)</text>
+          <width>20</width>
+          <height>40</height>
+          <horizontal_alignment>2</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_19</name>
+          <pv_name>$(P)$(R)Ch$(N):Temp_RBV</pv_name>
+          <x>25</x>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_20</name>
+          <pv_name>$(P)$(R)Ch$(N):Status_RBV</pv_name>
+          <x>25</x>
+          <y>20</y>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>Ch04</name>
+        <macros>
+          <N>04</N>
+        </macros>
+        <x>395</x>
+        <width>100</width>
+        <height>40</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_17</name>
+          <text>$(N)</text>
+          <width>20</width>
+          <height>40</height>
+          <horizontal_alignment>2</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_17</name>
+          <pv_name>$(P)$(R)Ch$(N):Temp_RBV</pv_name>
+          <x>25</x>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_18</name>
+          <pv_name>$(P)$(R)Ch$(N):Status_RBV</pv_name>
+          <x>25</x>
+          <y>20</y>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>Ch05</name>
+        <macros>
+          <N>05</N>
+        </macros>
+        <x>500</x>
+        <width>100</width>
+        <height>40</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_19</name>
+          <text>$(N)</text>
+          <width>20</width>
+          <height>40</height>
+          <horizontal_alignment>2</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_21</name>
+          <pv_name>$(P)$(R)Ch$(N):Temp_RBV</pv_name>
+          <x>25</x>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_22</name>
+          <pv_name>$(P)$(R)Ch$(N):Status_RBV</pv_name>
+          <x>25</x>
+          <y>20</y>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>Ch06</name>
+        <macros>
+          <N>06</N>
+        </macros>
+        <x>605</x>
+        <width>100</width>
+        <height>40</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_20</name>
+          <text>$(N)</text>
+          <width>20</width>
+          <height>40</height>
+          <horizontal_alignment>2</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_23</name>
+          <pv_name>$(P)$(R)Ch$(N):Temp_RBV</pv_name>
+          <x>25</x>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_24</name>
+          <pv_name>$(P)$(R)Ch$(N):Status_RBV</pv_name>
+          <x>25</x>
+          <y>20</y>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>Ch07</name>
+        <macros>
+          <N>07</N>
+        </macros>
+        <x>710</x>
+        <width>100</width>
+        <height>40</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_22</name>
+          <text>$(N)</text>
+          <width>20</width>
+          <height>40</height>
+          <horizontal_alignment>2</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_27</name>
+          <pv_name>$(P)$(R)Ch$(N):Temp_RBV</pv_name>
+          <x>25</x>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_28</name>
+          <pv_name>$(P)$(R)Ch$(N):Status_RBV</pv_name>
+          <x>25</x>
+          <y>20</y>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>Ch08</name>
+        <macros>
+          <N>08</N>
+        </macros>
+        <x>815</x>
+        <width>100</width>
+        <height>40</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_21</name>
+          <text>$(N)</text>
+          <width>20</width>
+          <height>40</height>
+          <horizontal_alignment>2</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_25</name>
+          <pv_name>$(P)$(R)Ch$(N):Temp_RBV</pv_name>
+          <x>25</x>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_26</name>
+          <pv_name>$(P)$(R)Ch$(N):Status_RBV</pv_name>
+          <x>25</x>
+          <y>20</y>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+      </widget>
+    </widget>
+    <widget type="group" version="3.0.0">
+      <name>Chs09-16</name>
+      <x>10</x>
+      <y>115</y>
+      <width>915</width>
+      <height>40</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="label" version="2.0.0">
+        <name>Label_31</name>
+        <text>Channel</text>
+        <width>80</width>
+        <height>40</height>
+        <horizontal_alignment>2</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>Ch09</name>
+        <macros>
+          <N>09</N>
+        </macros>
+        <x>80</x>
+        <width>100</width>
+        <height>40</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_32</name>
+          <text>$(N)</text>
+          <width>20</width>
+          <height>40</height>
+          <horizontal_alignment>2</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_45</name>
+          <pv_name>$(P)$(R)Ch$(N):Temp_RBV</pv_name>
+          <x>25</x>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_46</name>
+          <pv_name>$(P)$(R)Ch$(N):Status_RBV</pv_name>
+          <x>25</x>
+          <y>20</y>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>Ch10</name>
+        <macros>
+          <N>10</N>
+        </macros>
+        <x>185</x>
+        <width>100</width>
+        <height>40</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_33</name>
+          <text>$(N)</text>
+          <width>20</width>
+          <height>40</height>
+          <horizontal_alignment>2</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_47</name>
+          <pv_name>$(P)$(R)Ch$(N):Temp_RBV</pv_name>
+          <x>25</x>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_48</name>
+          <pv_name>$(P)$(R)Ch$(N):Status_RBV</pv_name>
+          <x>25</x>
+          <y>20</y>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>Ch11</name>
+        <macros>
+          <N>11</N>
+        </macros>
+        <x>290</x>
+        <width>100</width>
+        <height>40</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_35</name>
+          <text>$(N)</text>
+          <width>20</width>
+          <height>40</height>
+          <horizontal_alignment>2</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_51</name>
+          <pv_name>$(P)$(R)Ch$(N):Temp_RBV</pv_name>
+          <x>25</x>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_52</name>
+          <pv_name>$(P)$(R)Ch$(N):Status_RBV</pv_name>
+          <x>25</x>
+          <y>20</y>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>Ch12</name>
+        <macros>
+          <N>12</N>
+        </macros>
+        <x>395</x>
+        <width>100</width>
+        <height>40</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_34</name>
+          <text>$(N)</text>
+          <width>20</width>
+          <height>40</height>
+          <horizontal_alignment>2</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_49</name>
+          <pv_name>$(P)$(R)Ch$(N):Temp_RBV</pv_name>
+          <x>25</x>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_50</name>
+          <pv_name>$(P)$(R)Ch$(N):Status_RBV</pv_name>
+          <x>25</x>
+          <y>20</y>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>Ch13</name>
+        <macros>
+          <N>13</N>
+        </macros>
+        <x>500</x>
+        <width>100</width>
+        <height>40</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_36</name>
+          <text>$(N)</text>
+          <width>20</width>
+          <height>40</height>
+          <horizontal_alignment>2</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_53</name>
+          <pv_name>$(P)$(R)Ch$(N):Temp_RBV</pv_name>
+          <x>25</x>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_54</name>
+          <pv_name>$(P)$(R)Ch$(N):Status_RBV</pv_name>
+          <x>25</x>
+          <y>20</y>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>Ch14</name>
+        <macros>
+          <N>14</N>
+        </macros>
+        <x>605</x>
+        <width>100</width>
+        <height>40</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_37</name>
+          <text>$(N)</text>
+          <width>20</width>
+          <height>40</height>
+          <horizontal_alignment>2</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_55</name>
+          <pv_name>$(P)$(R)Ch$(N):Temp_RBV</pv_name>
+          <x>25</x>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_56</name>
+          <pv_name>$(P)$(R)Ch$(N):Status_RBV</pv_name>
+          <x>25</x>
+          <y>20</y>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>Ch15</name>
+        <macros>
+          <N>15</N>
+        </macros>
+        <x>710</x>
+        <width>100</width>
+        <height>40</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_39</name>
+          <text>$(N)</text>
+          <width>20</width>
+          <height>40</height>
+          <horizontal_alignment>2</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_59</name>
+          <pv_name>$(P)$(R)Ch$(N):Temp_RBV</pv_name>
+          <x>25</x>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_60</name>
+          <pv_name>$(P)$(R)Ch$(N):Status_RBV</pv_name>
+          <x>25</x>
+          <y>20</y>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>Ch16</name>
+        <macros>
+          <N>16</N>
+        </macros>
+        <x>815</x>
+        <width>100</width>
+        <height>40</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_38</name>
+          <text>$(N)</text>
+          <width>20</width>
+          <height>40</height>
+          <horizontal_alignment>2</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_57</name>
+          <pv_name>$(P)$(R)Ch$(N):Temp_RBV</pv_name>
+          <x>25</x>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_58</name>
+          <pv_name>$(P)$(R)Ch$(N):Status_RBV</pv_name>
+          <x>25</x>
+          <y>20</y>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+      </widget>
+    </widget>
+    <widget type="group" version="3.0.0">
+      <name>Chs17-24</name>
+      <x>10</x>
+      <y>160</y>
+      <width>915</width>
+      <height>40</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="label" version="2.0.0">
+        <name>Label_41</name>
+        <text>Channel</text>
+        <width>80</width>
+        <height>40</height>
+        <horizontal_alignment>2</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>Ch17</name>
+        <macros>
+          <N>17</N>
+        </macros>
+        <x>80</x>
+        <width>100</width>
+        <height>40</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_42</name>
+          <text>$(N)</text>
+          <width>20</width>
+          <height>40</height>
+          <horizontal_alignment>2</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_61</name>
+          <pv_name>$(P)$(R)Ch$(N):Temp_RBV</pv_name>
+          <x>25</x>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_62</name>
+          <pv_name>$(P)$(R)Ch$(N):Status_RBV</pv_name>
+          <x>25</x>
+          <y>20</y>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>Ch18</name>
+        <macros>
+          <N>18</N>
+        </macros>
+        <x>185</x>
+        <width>100</width>
+        <height>40</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_43</name>
+          <text>$(N)</text>
+          <width>20</width>
+          <height>40</height>
+          <horizontal_alignment>2</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_63</name>
+          <pv_name>$(P)$(R)Ch$(N):Temp_RBV</pv_name>
+          <x>25</x>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_64</name>
+          <pv_name>$(P)$(R)Ch$(N):Status_RBV</pv_name>
+          <x>25</x>
+          <y>20</y>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>Ch19</name>
+        <macros>
+          <N>19</N>
+        </macros>
+        <x>290</x>
+        <width>100</width>
+        <height>40</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_45</name>
+          <text>$(N)</text>
+          <width>20</width>
+          <height>40</height>
+          <horizontal_alignment>2</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_67</name>
+          <pv_name>$(P)$(R)Ch$(N):Temp_RBV</pv_name>
+          <x>25</x>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_68</name>
+          <pv_name>$(P)$(R)Ch$(N):Status_RBV</pv_name>
+          <x>25</x>
+          <y>20</y>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>Ch20</name>
+        <macros>
+          <N>20</N>
+        </macros>
+        <x>395</x>
+        <width>100</width>
+        <height>40</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_44</name>
+          <text>$(N)</text>
+          <width>20</width>
+          <height>40</height>
+          <horizontal_alignment>2</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_65</name>
+          <pv_name>$(P)$(R)Ch$(N):Temp_RBV</pv_name>
+          <x>25</x>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_66</name>
+          <pv_name>$(P)$(R)Ch$(N):Status_RBV</pv_name>
+          <x>25</x>
+          <y>20</y>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>Ch21</name>
+        <macros>
+          <N>21</N>
+        </macros>
+        <x>500</x>
+        <width>100</width>
+        <height>40</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_46</name>
+          <text>$(N)</text>
+          <width>20</width>
+          <height>40</height>
+          <horizontal_alignment>2</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_69</name>
+          <pv_name>$(P)$(R)Ch$(N):Temp_RBV</pv_name>
+          <x>25</x>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_70</name>
+          <pv_name>$(P)$(R)Ch$(N):Status_RBV</pv_name>
+          <x>25</x>
+          <y>20</y>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>Ch22</name>
+        <macros>
+          <N>22</N>
+        </macros>
+        <x>605</x>
+        <width>100</width>
+        <height>40</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_47</name>
+          <text>$(N)</text>
+          <width>20</width>
+          <height>40</height>
+          <horizontal_alignment>2</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_71</name>
+          <pv_name>$(P)$(R)Ch$(N):Temp_RBV</pv_name>
+          <x>25</x>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_72</name>
+          <pv_name>$(P)$(R)Ch$(N):Status_RBV</pv_name>
+          <x>25</x>
+          <y>20</y>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>Ch23</name>
+        <macros>
+          <N>23</N>
+        </macros>
+        <x>710</x>
+        <width>100</width>
+        <height>40</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_49</name>
+          <text>$(N)</text>
+          <width>20</width>
+          <height>40</height>
+          <horizontal_alignment>2</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_75</name>
+          <pv_name>$(P)$(R)Ch$(N):Temp_RBV</pv_name>
+          <x>25</x>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_76</name>
+          <pv_name>$(P)$(R)Ch$(N):Status_RBV</pv_name>
+          <x>25</x>
+          <y>20</y>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>Ch24</name>
+        <macros>
+          <N>24</N>
+        </macros>
+        <x>815</x>
+        <width>100</width>
+        <height>40</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_48</name>
+          <text>$(N)</text>
+          <width>20</width>
+          <height>40</height>
+          <horizontal_alignment>2</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_73</name>
+          <pv_name>$(P)$(R)Ch$(N):Temp_RBV</pv_name>
+          <x>25</x>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_74</name>
+          <pv_name>$(P)$(R)Ch$(N):Status_RBV</pv_name>
+          <x>25</x>
+          <y>20</y>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+      </widget>
+    </widget>
+    <widget type="group" version="3.0.0">
+      <name>Chs25-32</name>
+      <x>10</x>
+      <y>205</y>
+      <width>915</width>
+      <height>40</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="label" version="2.0.0">
+        <name>Label_50</name>
+        <text>Channel</text>
+        <width>80</width>
+        <height>40</height>
+        <horizontal_alignment>2</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>Ch25</name>
+        <macros>
+          <N>25</N>
+        </macros>
+        <x>80</x>
+        <width>100</width>
+        <height>40</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_51</name>
+          <text>$(N)</text>
+          <width>20</width>
+          <height>40</height>
+          <horizontal_alignment>2</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_77</name>
+          <pv_name>$(P)$(R)Ch$(N):Temp_RBV</pv_name>
+          <x>25</x>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_78</name>
+          <pv_name>$(P)$(R)Ch$(N):Status_RBV</pv_name>
+          <x>25</x>
+          <y>20</y>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>Ch26</name>
+        <macros>
+          <N>26</N>
+        </macros>
+        <x>185</x>
+        <width>100</width>
+        <height>40</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_52</name>
+          <text>$(N)</text>
+          <width>20</width>
+          <height>40</height>
+          <horizontal_alignment>2</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_79</name>
+          <pv_name>$(P)$(R)Ch$(N):Temp_RBV</pv_name>
+          <x>25</x>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_80</name>
+          <pv_name>$(P)$(R)Ch$(N):Status_RBV</pv_name>
+          <x>25</x>
+          <y>20</y>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>Ch27</name>
+        <macros>
+          <N>27</N>
+        </macros>
+        <x>290</x>
+        <width>100</width>
+        <height>40</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_54</name>
+          <text>$(N)</text>
+          <width>20</width>
+          <height>40</height>
+          <horizontal_alignment>2</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_83</name>
+          <pv_name>$(P)$(R)Ch$(N):Temp_RBV</pv_name>
+          <x>25</x>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_84</name>
+          <pv_name>$(P)$(R)Ch$(N):Status_RBV</pv_name>
+          <x>25</x>
+          <y>20</y>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>Ch28</name>
+        <macros>
+          <N>28</N>
+        </macros>
+        <x>395</x>
+        <width>100</width>
+        <height>40</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_53</name>
+          <text>$(N)</text>
+          <width>20</width>
+          <height>40</height>
+          <horizontal_alignment>2</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_81</name>
+          <pv_name>$(P)$(R)Ch$(N):Temp_RBV</pv_name>
+          <x>25</x>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_82</name>
+          <pv_name>$(P)$(R)Ch$(N):Status_RBV</pv_name>
+          <x>25</x>
+          <y>20</y>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>Ch29</name>
+        <macros>
+          <N>29</N>
+        </macros>
+        <x>500</x>
+        <width>100</width>
+        <height>40</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_55</name>
+          <text>$(N)</text>
+          <width>20</width>
+          <height>40</height>
+          <horizontal_alignment>2</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_85</name>
+          <pv_name>$(P)$(R)Ch$(N):Temp_RBV</pv_name>
+          <x>25</x>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_86</name>
+          <pv_name>$(P)$(R)Ch$(N):Status_RBV</pv_name>
+          <x>25</x>
+          <y>20</y>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>Ch30</name>
+        <macros>
+          <N>30</N>
+        </macros>
+        <x>605</x>
+        <width>100</width>
+        <height>40</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_56</name>
+          <text>$(N)</text>
+          <width>20</width>
+          <height>40</height>
+          <horizontal_alignment>2</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_87</name>
+          <pv_name>$(P)$(R)Ch$(N):Temp_RBV</pv_name>
+          <x>25</x>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_88</name>
+          <pv_name>$(P)$(R)Ch$(N):Status_RBV</pv_name>
+          <x>25</x>
+          <y>20</y>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>Ch31</name>
+        <macros>
+          <N>31</N>
+        </macros>
+        <x>710</x>
+        <width>100</width>
+        <height>40</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_59</name>
+          <text>$(N)</text>
+          <width>20</width>
+          <height>40</height>
+          <horizontal_alignment>2</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_91</name>
+          <pv_name>$(P)$(R)Ch$(N):Temp_RBV</pv_name>
+          <x>25</x>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_92</name>
+          <pv_name>$(P)$(R)Ch$(N):Status_RBV</pv_name>
+          <x>25</x>
+          <y>20</y>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>Ch32</name>
+        <macros>
+          <N>32</N>
+        </macros>
+        <x>815</x>
+        <width>100</width>
+        <height>40</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_58</name>
+          <text>$(N)</text>
+          <width>20</width>
+          <height>40</height>
+          <horizontal_alignment>2</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_89</name>
+          <pv_name>$(P)$(R)Ch$(N):Temp_RBV</pv_name>
+          <x>25</x>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_90</name>
+          <pv_name>$(P)$(R)Ch$(N):Status_RBV</pv_name>
+          <x>25</x>
+          <y>20</y>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+      </widget>
+    </widget>
+    <widget type="group" version="3.0.0">
+      <name>Chs33-40</name>
+      <x>10</x>
+      <y>250</y>
+      <width>915</width>
+      <height>40</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="label" version="2.0.0">
+        <name>Label_60</name>
+        <text>Channel</text>
+        <width>80</width>
+        <height>40</height>
+        <horizontal_alignment>2</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>Ch33</name>
+        <macros>
+          <N>33</N>
+        </macros>
+        <x>80</x>
+        <width>100</width>
+        <height>40</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_61</name>
+          <text>$(N)</text>
+          <width>20</width>
+          <height>40</height>
+          <horizontal_alignment>2</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_93</name>
+          <pv_name>$(P)$(R)Ch$(N):Temp_RBV</pv_name>
+          <x>25</x>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_94</name>
+          <pv_name>$(P)$(R)Ch$(N):Status_RBV</pv_name>
+          <x>25</x>
+          <y>20</y>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>Ch34</name>
+        <macros>
+          <N>34</N>
+        </macros>
+        <x>185</x>
+        <width>100</width>
+        <height>40</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_62</name>
+          <text>$(N)</text>
+          <width>20</width>
+          <height>40</height>
+          <horizontal_alignment>2</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_95</name>
+          <pv_name>$(P)$(R)Ch$(N):Temp_RBV</pv_name>
+          <x>25</x>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_96</name>
+          <pv_name>$(P)$(R)Ch$(N):Status_RBV</pv_name>
+          <x>25</x>
+          <y>20</y>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>Ch35</name>
+        <macros>
+          <N>35</N>
+        </macros>
+        <x>290</x>
+        <width>100</width>
+        <height>40</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_64</name>
+          <text>$(N)</text>
+          <width>20</width>
+          <height>40</height>
+          <horizontal_alignment>2</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_99</name>
+          <pv_name>$(P)$(R)Ch$(N):Temp_RBV</pv_name>
+          <x>25</x>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_100</name>
+          <pv_name>$(P)$(R)Ch$(N):Status_RBV</pv_name>
+          <x>25</x>
+          <y>20</y>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>Ch36</name>
+        <macros>
+          <N>36</N>
+        </macros>
+        <x>395</x>
+        <width>100</width>
+        <height>40</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_63</name>
+          <text>$(N)</text>
+          <width>20</width>
+          <height>40</height>
+          <horizontal_alignment>2</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_97</name>
+          <pv_name>$(P)$(R)Ch$(N):Temp_RBV</pv_name>
+          <x>25</x>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_98</name>
+          <pv_name>$(P)$(R)Ch$(N):Status_RBV</pv_name>
+          <x>25</x>
+          <y>20</y>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>Ch37</name>
+        <macros>
+          <N>37</N>
+        </macros>
+        <x>500</x>
+        <width>100</width>
+        <height>40</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_65</name>
+          <text>$(N)</text>
+          <width>20</width>
+          <height>40</height>
+          <horizontal_alignment>2</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_101</name>
+          <pv_name>$(P)$(R)Ch$(N):Temp_RBV</pv_name>
+          <x>25</x>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_102</name>
+          <pv_name>$(P)$(R)Ch$(N):Status_RBV</pv_name>
+          <x>25</x>
+          <y>20</y>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>Ch38</name>
+        <macros>
+          <N>38</N>
+        </macros>
+        <x>605</x>
+        <width>100</width>
+        <height>40</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_66</name>
+          <text>$(N)</text>
+          <width>20</width>
+          <height>40</height>
+          <horizontal_alignment>2</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_103</name>
+          <pv_name>$(P)$(R)Ch$(N):Temp_RBV</pv_name>
+          <x>25</x>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_104</name>
+          <pv_name>$(P)$(R)Ch$(N):Status_RBV</pv_name>
+          <x>25</x>
+          <y>20</y>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>Ch39</name>
+        <macros>
+          <N>39</N>
+        </macros>
+        <x>710</x>
+        <width>100</width>
+        <height>40</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_68</name>
+          <text>$(N)</text>
+          <width>20</width>
+          <height>40</height>
+          <horizontal_alignment>2</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_107</name>
+          <pv_name>$(P)$(R)Ch$(N):Temp_RBV</pv_name>
+          <x>25</x>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_108</name>
+          <pv_name>$(P)$(R)Ch$(N):Status_RBV</pv_name>
+          <x>25</x>
+          <y>20</y>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>Ch40</name>
+        <macros>
+          <N>40</N>
+        </macros>
+        <x>815</x>
+        <width>100</width>
+        <height>40</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_67</name>
+          <text>$(N)</text>
+          <width>20</width>
+          <height>40</height>
+          <horizontal_alignment>2</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_105</name>
+          <pv_name>$(P)$(R)Ch$(N):Temp_RBV</pv_name>
+          <x>25</x>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_106</name>
+          <pv_name>$(P)$(R)Ch$(N):Status_RBV</pv_name>
+          <x>25</x>
+          <y>20</y>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+      </widget>
+    </widget>
+    <widget type="group" version="3.0.0">
+      <name>Chs41-48</name>
+      <x>10</x>
+      <y>295</y>
+      <width>915</width>
+      <height>40</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="label" version="2.0.0">
+        <name>Label_69</name>
+        <text>Channel</text>
+        <width>80</width>
+        <height>40</height>
+        <horizontal_alignment>2</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>Ch41</name>
+        <macros>
+          <N>41</N>
+        </macros>
+        <x>80</x>
+        <width>100</width>
+        <height>40</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_70</name>
+          <text>$(N)</text>
+          <width>20</width>
+          <height>40</height>
+          <horizontal_alignment>2</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_109</name>
+          <pv_name>$(P)$(R)Ch$(N):Temp_RBV</pv_name>
+          <x>25</x>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_110</name>
+          <pv_name>$(P)$(R)Ch$(N):Status_RBV</pv_name>
+          <x>25</x>
+          <y>20</y>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>Ch42</name>
+        <macros>
+          <N>42</N>
+        </macros>
+        <x>185</x>
+        <width>100</width>
+        <height>40</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_71</name>
+          <text>$(N)</text>
+          <width>20</width>
+          <height>40</height>
+          <horizontal_alignment>2</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_111</name>
+          <pv_name>$(P)$(R)Ch$(N):Temp_RBV</pv_name>
+          <x>25</x>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_112</name>
+          <pv_name>$(P)$(R)Ch$(N):Status_RBV</pv_name>
+          <x>25</x>
+          <y>20</y>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>Ch43</name>
+        <macros>
+          <N>43</N>
+        </macros>
+        <x>290</x>
+        <width>100</width>
+        <height>40</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_73</name>
+          <text>$(N)</text>
+          <width>20</width>
+          <height>40</height>
+          <horizontal_alignment>2</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_115</name>
+          <pv_name>$(P)$(R)Ch$(N):Temp_RBV</pv_name>
+          <x>25</x>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_116</name>
+          <pv_name>$(P)$(R)Ch$(N):Status_RBV</pv_name>
+          <x>25</x>
+          <y>20</y>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>Ch44</name>
+        <macros>
+          <N>44</N>
+        </macros>
+        <x>395</x>
+        <width>100</width>
+        <height>40</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_72</name>
+          <text>$(N)</text>
+          <width>20</width>
+          <height>40</height>
+          <horizontal_alignment>2</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_113</name>
+          <pv_name>$(P)$(R)Ch$(N):Temp_RBV</pv_name>
+          <x>25</x>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_114</name>
+          <pv_name>$(P)$(R)Ch$(N):Status_RBV</pv_name>
+          <x>25</x>
+          <y>20</y>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>Ch45</name>
+        <macros>
+          <N>45</N>
+        </macros>
+        <x>500</x>
+        <width>100</width>
+        <height>40</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_74</name>
+          <text>$(N)</text>
+          <width>20</width>
+          <height>40</height>
+          <horizontal_alignment>2</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_117</name>
+          <pv_name>$(P)$(R)Ch$(N):Temp_RBV</pv_name>
+          <x>25</x>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_118</name>
+          <pv_name>$(P)$(R)Ch$(N):Status_RBV</pv_name>
+          <x>25</x>
+          <y>20</y>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>Ch46</name>
+        <macros>
+          <N>46</N>
+        </macros>
+        <x>605</x>
+        <width>100</width>
+        <height>40</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_75</name>
+          <text>$(N)</text>
+          <width>20</width>
+          <height>40</height>
+          <horizontal_alignment>2</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_119</name>
+          <pv_name>$(P)$(R)Ch$(N):Temp_RBV</pv_name>
+          <x>25</x>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_120</name>
+          <pv_name>$(P)$(R)Ch$(N):Status_RBV</pv_name>
+          <x>25</x>
+          <y>20</y>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>Ch47</name>
+        <macros>
+          <N>47</N>
+        </macros>
+        <x>710</x>
+        <width>100</width>
+        <height>40</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_77</name>
+          <text>$(N)</text>
+          <width>20</width>
+          <height>40</height>
+          <horizontal_alignment>2</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_123</name>
+          <pv_name>$(P)$(R)Ch$(N):Temp_RBV</pv_name>
+          <x>25</x>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_124</name>
+          <pv_name>$(P)$(R)Ch$(N):Status_RBV</pv_name>
+          <x>25</x>
+          <y>20</y>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>Ch48</name>
+        <macros>
+          <N>48</N>
+        </macros>
+        <x>815</x>
+        <width>100</width>
+        <height>40</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_76</name>
+          <text>$(N)</text>
+          <width>20</width>
+          <height>40</height>
+          <horizontal_alignment>2</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_121</name>
+          <pv_name>$(P)$(R)Ch$(N):Temp_RBV</pv_name>
+          <x>25</x>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_122</name>
+          <pv_name>$(P)$(R)Ch$(N):Status_RBV</pv_name>
+          <x>25</x>
+          <y>20</y>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+      </widget>
+    </widget>
+    <widget type="group" version="3.0.0">
+      <name>Chs49-56</name>
+      <x>10</x>
+      <y>340</y>
+      <width>915</width>
+      <height>40</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="label" version="2.0.0">
+        <name>Label_78</name>
+        <text>Channel</text>
+        <width>80</width>
+        <height>40</height>
+        <horizontal_alignment>2</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>Ch49</name>
+        <macros>
+          <N>49</N>
+        </macros>
+        <x>80</x>
+        <width>100</width>
+        <height>40</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_79</name>
+          <text>$(N)</text>
+          <width>20</width>
+          <height>40</height>
+          <horizontal_alignment>2</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_125</name>
+          <pv_name>$(P)$(R)Ch$(N):Temp_RBV</pv_name>
+          <x>25</x>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_126</name>
+          <pv_name>$(P)$(R)Ch$(N):Status_RBV</pv_name>
+          <x>25</x>
+          <y>20</y>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>Ch50</name>
+        <macros>
+          <N>50</N>
+        </macros>
+        <x>185</x>
+        <width>100</width>
+        <height>40</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_80</name>
+          <text>$(N)</text>
+          <width>20</width>
+          <height>40</height>
+          <horizontal_alignment>2</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_127</name>
+          <pv_name>$(P)$(R)Ch$(N):Temp_RBV</pv_name>
+          <x>25</x>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_128</name>
+          <pv_name>$(P)$(R)Ch$(N):Status_RBV</pv_name>
+          <x>25</x>
+          <y>20</y>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>Ch51</name>
+        <macros>
+          <N>51</N>
+        </macros>
+        <x>290</x>
+        <width>100</width>
+        <height>40</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_82</name>
+          <text>$(N)</text>
+          <width>20</width>
+          <height>40</height>
+          <horizontal_alignment>2</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_131</name>
+          <pv_name>$(P)$(R)Ch$(N):Temp_RBV</pv_name>
+          <x>25</x>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_132</name>
+          <pv_name>$(P)$(R)Ch$(N):Status_RBV</pv_name>
+          <x>25</x>
+          <y>20</y>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>Ch52</name>
+        <macros>
+          <N>52</N>
+        </macros>
+        <x>395</x>
+        <width>100</width>
+        <height>40</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_81</name>
+          <text>$(N)</text>
+          <width>20</width>
+          <height>40</height>
+          <horizontal_alignment>2</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_129</name>
+          <pv_name>$(P)$(R)Ch$(N):Temp_RBV</pv_name>
+          <x>25</x>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_130</name>
+          <pv_name>$(P)$(R)Ch$(N):Status_RBV</pv_name>
+          <x>25</x>
+          <y>20</y>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>Ch53</name>
+        <macros>
+          <N>53</N>
+        </macros>
+        <x>500</x>
+        <width>100</width>
+        <height>40</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_83</name>
+          <text>$(N)</text>
+          <width>20</width>
+          <height>40</height>
+          <horizontal_alignment>2</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_133</name>
+          <pv_name>$(P)$(R)Ch$(N):Temp_RBV</pv_name>
+          <x>25</x>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_134</name>
+          <pv_name>$(P)$(R)Ch$(N):Status_RBV</pv_name>
+          <x>25</x>
+          <y>20</y>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>Ch54</name>
+        <macros>
+          <N>54</N>
+        </macros>
+        <x>605</x>
+        <width>100</width>
+        <height>40</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_84</name>
+          <text>$(N)</text>
+          <width>20</width>
+          <height>40</height>
+          <horizontal_alignment>2</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_135</name>
+          <pv_name>$(P)$(R)Ch$(N):Temp_RBV</pv_name>
+          <x>25</x>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_136</name>
+          <pv_name>$(P)$(R)Ch$(N):Status_RBV</pv_name>
+          <x>25</x>
+          <y>20</y>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>Ch55</name>
+        <macros>
+          <N>55</N>
+        </macros>
+        <x>710</x>
+        <width>100</width>
+        <height>40</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_86</name>
+          <text>$(N)</text>
+          <width>20</width>
+          <height>40</height>
+          <horizontal_alignment>2</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_139</name>
+          <pv_name>$(P)$(R)Ch$(N):Temp_RBV</pv_name>
+          <x>25</x>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_140</name>
+          <pv_name>$(P)$(R)Ch$(N):Status_RBV</pv_name>
+          <x>25</x>
+          <y>20</y>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>Ch56</name>
+        <macros>
+          <N>56</N>
+        </macros>
+        <x>815</x>
+        <width>100</width>
+        <height>40</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_85</name>
+          <text>$(N)</text>
+          <width>20</width>
+          <height>40</height>
+          <horizontal_alignment>2</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_137</name>
+          <pv_name>$(P)$(R)Ch$(N):Temp_RBV</pv_name>
+          <x>25</x>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_138</name>
+          <pv_name>$(P)$(R)Ch$(N):Status_RBV</pv_name>
+          <x>25</x>
+          <y>20</y>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+      </widget>
+    </widget>
+    <widget type="group" version="3.0.0">
+      <name>Chs57-64</name>
+      <x>10</x>
+      <y>385</y>
+      <width>915</width>
+      <height>40</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="label" version="2.0.0">
+        <name>Label_87</name>
+        <text>Channel</text>
+        <width>80</width>
+        <height>40</height>
+        <horizontal_alignment>2</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>Ch57</name>
+        <macros>
+          <N>57</N>
+        </macros>
+        <x>80</x>
+        <width>100</width>
+        <height>40</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_88</name>
+          <text>$(N)</text>
+          <width>20</width>
+          <height>40</height>
+          <horizontal_alignment>2</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_141</name>
+          <pv_name>$(P)$(R)Ch$(N):Temp_RBV</pv_name>
+          <x>25</x>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_142</name>
+          <pv_name>$(P)$(R)Ch$(N):Status_RBV</pv_name>
+          <x>25</x>
+          <y>20</y>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>Ch58</name>
+        <macros>
+          <N>58</N>
+        </macros>
+        <x>185</x>
+        <width>100</width>
+        <height>40</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_89</name>
+          <text>$(N)</text>
+          <width>20</width>
+          <height>40</height>
+          <horizontal_alignment>2</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_143</name>
+          <pv_name>$(P)$(R)Ch$(N):Temp_RBV</pv_name>
+          <x>25</x>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_144</name>
+          <pv_name>$(P)$(R)Ch$(N):Status_RBV</pv_name>
+          <x>25</x>
+          <y>20</y>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>Ch59</name>
+        <macros>
+          <N>59</N>
+        </macros>
+        <x>290</x>
+        <width>100</width>
+        <height>40</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_91</name>
+          <text>$(N)</text>
+          <width>20</width>
+          <height>40</height>
+          <horizontal_alignment>2</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_147</name>
+          <pv_name>$(P)$(R)Ch$(N):Temp_RBV</pv_name>
+          <x>25</x>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_148</name>
+          <pv_name>$(P)$(R)Ch$(N):Status_RBV</pv_name>
+          <x>25</x>
+          <y>20</y>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>Ch60</name>
+        <macros>
+          <N>60</N>
+        </macros>
+        <x>395</x>
+        <width>100</width>
+        <height>40</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_90</name>
+          <text>$(N)</text>
+          <width>20</width>
+          <height>40</height>
+          <horizontal_alignment>2</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_145</name>
+          <pv_name>$(P)$(R)Ch$(N):Temp_RBV</pv_name>
+          <x>25</x>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_146</name>
+          <pv_name>$(P)$(R)Ch$(N):Status_RBV</pv_name>
+          <x>25</x>
+          <y>20</y>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>Ch61</name>
+        <macros>
+          <N>61</N>
+        </macros>
+        <x>500</x>
+        <width>100</width>
+        <height>40</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_92</name>
+          <text>$(N)</text>
+          <width>20</width>
+          <height>40</height>
+          <horizontal_alignment>2</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_149</name>
+          <pv_name>$(P)$(R)Ch$(N):Temp_RBV</pv_name>
+          <x>25</x>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_150</name>
+          <pv_name>$(P)$(R)Ch$(N):Status_RBV</pv_name>
+          <x>25</x>
+          <y>20</y>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>Ch62</name>
+        <macros>
+          <N>62</N>
+        </macros>
+        <x>605</x>
+        <width>100</width>
+        <height>40</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_93</name>
+          <text>$(N)</text>
+          <width>20</width>
+          <height>40</height>
+          <horizontal_alignment>2</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_151</name>
+          <pv_name>$(P)$(R)Ch$(N):Temp_RBV</pv_name>
+          <x>25</x>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_152</name>
+          <pv_name>$(P)$(R)Ch$(N):Status_RBV</pv_name>
+          <x>25</x>
+          <y>20</y>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>Ch63</name>
+        <macros>
+          <N>63</N>
+        </macros>
+        <x>710</x>
+        <width>100</width>
+        <height>40</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_95</name>
+          <text>$(N)</text>
+          <width>20</width>
+          <height>40</height>
+          <horizontal_alignment>2</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_155</name>
+          <pv_name>$(P)$(R)Ch$(N):Temp_RBV</pv_name>
+          <x>25</x>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_156</name>
+          <pv_name>$(P)$(R)Ch$(N):Status_RBV</pv_name>
+          <x>25</x>
+          <y>20</y>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>Ch64</name>
+        <macros>
+          <N>64</N>
+        </macros>
+        <x>815</x>
+        <width>100</width>
+        <height>40</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_94</name>
+          <text>$(N)</text>
+          <width>20</width>
+          <height>40</height>
+          <horizontal_alignment>2</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_153</name>
+          <pv_name>$(P)$(R)Ch$(N):Temp_RBV</pv_name>
+          <x>25</x>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_154</name>
+          <pv_name>$(P)$(R)Ch$(N):Status_RBV</pv_name>
+          <x>25</x>
+          <y>20</y>
+          <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+      </widget>
+    </widget>
+    <widget type="group" version="3.0.0">
+      <name>Units_1</name>
+      <x>430</x>
+      <y>10</y>
+      <width>230</width>
+      <height>20</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="label" version="2.0.0">
+        <name>Label_101</name>
+        <text>Time</text>
+        <horizontal_alignment>2</horizontal_alignment>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_157</name>
+        <pv_name>$(P)$(R)ScanFrameTime_RBV</pv_name>
+        <x>105</x>
+        <width>125</width>
+        <background_color>
+          <color name="Background" red="255" green="255" blue="255">
+          </color>
+        </background_color>
+        <horizontal_alignment>1</horizontal_alignment>
       </widget>
     </widget>
   </widget>
