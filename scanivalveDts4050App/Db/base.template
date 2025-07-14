@@ -18,6 +18,7 @@ record(bo, "$(P)$(R)Status") {
     field(OUT,  "@scanivalveDts4050.proto sendCommand(STATUS) $(PORT)")
     field(PINI, "YES")
     field(SCAN, "Passive")
+    info(autosaveFields, "SCAN")
 }
 
 record(stringin, "$(P)$(R)Status_RBV") {
@@ -49,6 +50,7 @@ record(longout, "$(P)$(R)Average") {
     field(DRVL, "1")
     field(DRVH, "240")
     field(FLNK, "$(P)$(R)ListScanVariables PP")
+    info(autosaveFields, "VAL")
 }
 
 record(longin, "$(P)$(R)ExtTriggerDiv_RBV") {
@@ -65,6 +67,7 @@ record(longout, "$(P)$(R)ExtTriggerDiv") {
     field(DRVL, "0")
     field(DRVH, "254")
     field(FLNK, "$(P)$(R)ListScanVariables PP")
+    info(autosaveFields, "VAL")
 }
 
 record(bo, "$(P)$(R)StartScan") {
