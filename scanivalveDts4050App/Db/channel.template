@@ -6,9 +6,44 @@ record(ai, "$(P)$(R)Ch$(N):Temp_RBV") {
     field(INP,  "@scanivalveDts4050.proto getScanChTemp($(N)) $(PORT)")
 }
 
-record(stringin, "$(P)$(R)Ch$(N):Status_RBV") {
-    field(DESC, "Ch$(N) Status")
+record(longin, "$(P)$(R)Ch$(N):FullStatus_RBV") {
+    field(DESC, "Ch$(N) RawStatus")
     field(SCAN, "I/O Intr")
     field(DTYP, "stream")
     field(INP,  "@scanivalveDts4050.proto getScanChStatus($(N)) $(PORT)")
+}
+
+record(calc, "$(P)$(R)Ch$(N):RawThermCpl_RBV") {
+    field(INPA, "$(P)$(R)Ch$(N):FullStatus_RBV CP")
+    field(CALC, "A & 0x0F")
+}
+
+record(calc, "$(P)$(R)Ch$(N):RawStatus_RBV") {
+    field(INPA, "$(P)$(R)Ch$(N):FullStatus_RBV CP")
+    field(CALC, "A & 0xFFF0")
+}
+
+record(mbbi, "$(P)$(R)Ch$(N):ThermCpl_RBV") {
+    field(INP,  "$(P)$(R)Ch$(N):RawThermCpl_RBV CP")
+    field(DTYP, "Raw Soft Channel")
+    field(ZRVL,  "0") field(ZRST, "J")
+    field(ONVL,  "2") field(ONST, "E")
+    field(TWVL,  "4") field(TWST, "K")
+    field(THVL,  "6") field(THST, "N")
+    field(FRVL,  "8") field(FRST, "R")
+    field(FVVL, "10") field(FVST, "S")
+    field(SXVL, "12") field(SXST, "T")
+    field(SVVL, "14") field(SVST, "B")
+}
+
+record(mbbi, "$(P)$(R)Ch$(N):Status_RBV") {
+    field(INP,  "$(P)$(R)Ch$(N):RawStatus_RBV CP")
+    field(DTYP, "Raw Soft Channel")
+    field(ZRVL, "0")     field(ZRST, "OK")          field(ZRSV, "NO_ALARM")
+    field(ONVL, "4096")  field(ONST, "A/D Disbl")   field(ONSV, "MAJOR")
+    field(TWVL, "8192")  field(TWST, "T/C Open")    field(TWSV, "MAJOR")
+    field(THVL, "12288") field(THST, "Ovr Rng")     field(THSV, "MAJOR")
+    field(FRVL, "16384") field(FRST, "Und Rng")     field(FRSV, "MAJOR")
+    field(FVVL, "20480") field(FVST, "Ovr Limt")    field(FVSV, "MAJOR")
+    field(SXVL, "24576") field(SXST, "Und Limt")    field(SXSV, "MAJOR")
 }

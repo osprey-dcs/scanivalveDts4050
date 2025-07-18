@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-07-14 16:04:19 by bmartins-->
+<!--Saved on 2025-07-17 23:11:16 by bmartins-->
 <display version="2.0.0">
   <name>Scanivalve DTS4050 - $(P)$(R)</name>
   <macros>
@@ -655,7 +655,6 @@
           <name>Label_15</name>
           <text>$(N)</text>
           <width>20</width>
-          <height>40</height>
           <horizontal_alignment>2</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
         </widget>
@@ -682,6 +681,17 @@
           </background_color>
           <horizontal_alignment>1</horizontal_alignment>
         </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_30</name>
+          <pv_name>$(P)$(R)Ch$(N):ThermCpl_RBV</pv_name>
+          <y>20</y>
+          <width>20</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
       </widget>
       <widget type="group" version="3.0.0">
         <name>Ch02</name>
@@ -697,7 +707,6 @@
           <name>Label_16</name>
           <text>$(N)</text>
           <width>20</width>
-          <height>40</height>
           <horizontal_alignment>2</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
         </widget>
@@ -724,6 +733,17 @@
           </background_color>
           <horizontal_alignment>1</horizontal_alignment>
         </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_31</name>
+          <pv_name>$(P)$(R)Ch$(N):ThermCpl_RBV</pv_name>
+          <y>20</y>
+          <width>20</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
       </widget>
       <widget type="group" version="3.0.0">
         <name>Ch03</name>
@@ -739,7 +759,6 @@
           <name>Label_18</name>
           <text>$(N)</text>
           <width>20</width>
-          <height>40</height>
           <horizontal_alignment>2</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
         </widget>
@@ -766,6 +785,17 @@
           </background_color>
           <horizontal_alignment>1</horizontal_alignment>
         </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_32</name>
+          <pv_name>$(P)$(R)Ch$(N):ThermCpl_RBV</pv_name>
+          <y>20</y>
+          <width>20</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
       </widget>
       <widget type="group" version="3.0.0">
         <name>Ch04</name>
@@ -781,7 +811,6 @@
           <name>Label_17</name>
           <text>$(N)</text>
           <width>20</width>
-          <height>40</height>
           <horizontal_alignment>2</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
         </widget>
@@ -808,6 +837,17 @@
           </background_color>
           <horizontal_alignment>1</horizontal_alignment>
         </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_33</name>
+          <pv_name>$(P)$(R)Ch$(N):ThermCpl_RBV</pv_name>
+          <y>20</y>
+          <width>20</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
       </widget>
       <widget type="group" version="3.0.0">
         <name>Ch05</name>
@@ -823,7 +863,6 @@
           <name>Label_19</name>
           <text>$(N)</text>
           <width>20</width>
-          <height>40</height>
           <horizontal_alignment>2</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
         </widget>
@@ -850,6 +889,17 @@
           </background_color>
           <horizontal_alignment>1</horizontal_alignment>
         </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_34</name>
+          <pv_name>$(P)$(R)Ch$(N):ThermCpl_RBV</pv_name>
+          <y>20</y>
+          <width>20</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
       </widget>
       <widget type="group" version="3.0.0">
         <name>Ch06</name>
@@ -865,7 +915,6 @@
           <name>Label_20</name>
           <text>$(N)</text>
           <width>20</width>
-          <height>40</height>
           <horizontal_alignment>2</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
         </widget>
@@ -892,6 +941,17 @@
           </background_color>
           <horizontal_alignment>1</horizontal_alignment>
         </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_35</name>
+          <pv_name>$(P)$(R)Ch$(N):ThermCpl_RBV</pv_name>
+          <y>20</y>
+          <width>20</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
       </widget>
       <widget type="group" version="3.0.0">
         <name>Ch07</name>
@@ -907,7 +967,6 @@
           <name>Label_22</name>
           <text>$(N)</text>
           <width>20</width>
-          <height>40</height>
           <horizontal_alignment>2</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
         </widget>
@@ -934,6 +993,17 @@
           </background_color>
           <horizontal_alignment>1</horizontal_alignment>
         </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_36</name>
+          <pv_name>$(P)$(R)Ch$(N):ThermCpl_RBV</pv_name>
+          <y>20</y>
+          <width>20</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
       </widget>
       <widget type="group" version="3.0.0">
         <name>Ch08</name>
@@ -949,7 +1019,6 @@
           <name>Label_21</name>
           <text>$(N)</text>
           <width>20</width>
-          <height>40</height>
           <horizontal_alignment>2</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
         </widget>
@@ -970,6 +1039,17 @@
           <x>25</x>
           <y>20</y>
           <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_37</name>
+          <pv_name>$(P)$(R)Ch$(N):ThermCpl_RBV</pv_name>
+          <y>20</y>
+          <width>20</width>
           <background_color>
             <color name="Background" red="255" green="255" blue="255">
             </color>
@@ -1008,7 +1088,6 @@
           <name>Label_32</name>
           <text>$(N)</text>
           <width>20</width>
-          <height>40</height>
           <horizontal_alignment>2</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
         </widget>
@@ -1035,6 +1114,17 @@
           </background_color>
           <horizontal_alignment>1</horizontal_alignment>
         </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_38</name>
+          <pv_name>$(P)$(R)Ch$(N):ThermCpl_RBV</pv_name>
+          <y>20</y>
+          <width>20</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
       </widget>
       <widget type="group" version="3.0.0">
         <name>Ch10</name>
@@ -1050,7 +1140,6 @@
           <name>Label_33</name>
           <text>$(N)</text>
           <width>20</width>
-          <height>40</height>
           <horizontal_alignment>2</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
         </widget>
@@ -1077,6 +1166,17 @@
           </background_color>
           <horizontal_alignment>1</horizontal_alignment>
         </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_39</name>
+          <pv_name>$(P)$(R)Ch$(N):ThermCpl_RBV</pv_name>
+          <y>20</y>
+          <width>20</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
       </widget>
       <widget type="group" version="3.0.0">
         <name>Ch11</name>
@@ -1092,7 +1192,6 @@
           <name>Label_35</name>
           <text>$(N)</text>
           <width>20</width>
-          <height>40</height>
           <horizontal_alignment>2</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
         </widget>
@@ -1119,6 +1218,17 @@
           </background_color>
           <horizontal_alignment>1</horizontal_alignment>
         </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_40</name>
+          <pv_name>$(P)$(R)Ch$(N):ThermCpl_RBV</pv_name>
+          <y>20</y>
+          <width>20</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
       </widget>
       <widget type="group" version="3.0.0">
         <name>Ch12</name>
@@ -1134,7 +1244,6 @@
           <name>Label_34</name>
           <text>$(N)</text>
           <width>20</width>
-          <height>40</height>
           <horizontal_alignment>2</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
         </widget>
@@ -1161,6 +1270,17 @@
           </background_color>
           <horizontal_alignment>1</horizontal_alignment>
         </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_41</name>
+          <pv_name>$(P)$(R)Ch$(N):ThermCpl_RBV</pv_name>
+          <y>20</y>
+          <width>20</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
       </widget>
       <widget type="group" version="3.0.0">
         <name>Ch13</name>
@@ -1176,7 +1296,6 @@
           <name>Label_36</name>
           <text>$(N)</text>
           <width>20</width>
-          <height>40</height>
           <horizontal_alignment>2</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
         </widget>
@@ -1203,6 +1322,17 @@
           </background_color>
           <horizontal_alignment>1</horizontal_alignment>
         </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_42</name>
+          <pv_name>$(P)$(R)Ch$(N):ThermCpl_RBV</pv_name>
+          <y>20</y>
+          <width>20</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
       </widget>
       <widget type="group" version="3.0.0">
         <name>Ch14</name>
@@ -1218,7 +1348,6 @@
           <name>Label_37</name>
           <text>$(N)</text>
           <width>20</width>
-          <height>40</height>
           <horizontal_alignment>2</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
         </widget>
@@ -1245,6 +1374,17 @@
           </background_color>
           <horizontal_alignment>1</horizontal_alignment>
         </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_43</name>
+          <pv_name>$(P)$(R)Ch$(N):ThermCpl_RBV</pv_name>
+          <y>20</y>
+          <width>20</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
       </widget>
       <widget type="group" version="3.0.0">
         <name>Ch15</name>
@@ -1260,7 +1400,6 @@
           <name>Label_39</name>
           <text>$(N)</text>
           <width>20</width>
-          <height>40</height>
           <horizontal_alignment>2</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
         </widget>
@@ -1287,6 +1426,17 @@
           </background_color>
           <horizontal_alignment>1</horizontal_alignment>
         </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_44</name>
+          <pv_name>$(P)$(R)Ch$(N):ThermCpl_RBV</pv_name>
+          <y>20</y>
+          <width>20</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
       </widget>
       <widget type="group" version="3.0.0">
         <name>Ch16</name>
@@ -1302,7 +1452,6 @@
           <name>Label_38</name>
           <text>$(N)</text>
           <width>20</width>
-          <height>40</height>
           <horizontal_alignment>2</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
         </widget>
@@ -1323,6 +1472,17 @@
           <x>25</x>
           <y>20</y>
           <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_158</name>
+          <pv_name>$(P)$(R)Ch$(N):ThermCpl_RBV</pv_name>
+          <y>20</y>
+          <width>20</width>
           <background_color>
             <color name="Background" red="255" green="255" blue="255">
             </color>
@@ -1361,7 +1521,6 @@
           <name>Label_42</name>
           <text>$(N)</text>
           <width>20</width>
-          <height>40</height>
           <horizontal_alignment>2</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
         </widget>
@@ -1388,6 +1547,17 @@
           </background_color>
           <horizontal_alignment>1</horizontal_alignment>
         </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_159</name>
+          <pv_name>$(P)$(R)Ch$(N):ThermCpl_RBV</pv_name>
+          <y>20</y>
+          <width>20</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
       </widget>
       <widget type="group" version="3.0.0">
         <name>Ch18</name>
@@ -1403,7 +1573,6 @@
           <name>Label_43</name>
           <text>$(N)</text>
           <width>20</width>
-          <height>40</height>
           <horizontal_alignment>2</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
         </widget>
@@ -1430,6 +1599,17 @@
           </background_color>
           <horizontal_alignment>1</horizontal_alignment>
         </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_160</name>
+          <pv_name>$(P)$(R)Ch$(N):ThermCpl_RBV</pv_name>
+          <y>20</y>
+          <width>20</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
       </widget>
       <widget type="group" version="3.0.0">
         <name>Ch19</name>
@@ -1445,7 +1625,6 @@
           <name>Label_45</name>
           <text>$(N)</text>
           <width>20</width>
-          <height>40</height>
           <horizontal_alignment>2</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
         </widget>
@@ -1472,6 +1651,17 @@
           </background_color>
           <horizontal_alignment>1</horizontal_alignment>
         </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_161</name>
+          <pv_name>$(P)$(R)Ch$(N):ThermCpl_RBV</pv_name>
+          <y>20</y>
+          <width>20</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
       </widget>
       <widget type="group" version="3.0.0">
         <name>Ch20</name>
@@ -1487,7 +1677,6 @@
           <name>Label_44</name>
           <text>$(N)</text>
           <width>20</width>
-          <height>40</height>
           <horizontal_alignment>2</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
         </widget>
@@ -1514,6 +1703,17 @@
           </background_color>
           <horizontal_alignment>1</horizontal_alignment>
         </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_170</name>
+          <pv_name>$(P)$(R)Ch$(N):ThermCpl_RBV</pv_name>
+          <y>20</y>
+          <width>20</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
       </widget>
       <widget type="group" version="3.0.0">
         <name>Ch21</name>
@@ -1529,7 +1729,6 @@
           <name>Label_46</name>
           <text>$(N)</text>
           <width>20</width>
-          <height>40</height>
           <horizontal_alignment>2</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
         </widget>
@@ -1556,6 +1755,17 @@
           </background_color>
           <horizontal_alignment>1</horizontal_alignment>
         </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_163</name>
+          <pv_name>$(P)$(R)Ch$(N):ThermCpl_RBV</pv_name>
+          <y>20</y>
+          <width>20</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
       </widget>
       <widget type="group" version="3.0.0">
         <name>Ch22</name>
@@ -1571,7 +1781,6 @@
           <name>Label_47</name>
           <text>$(N)</text>
           <width>20</width>
-          <height>40</height>
           <horizontal_alignment>2</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
         </widget>
@@ -1598,6 +1807,17 @@
           </background_color>
           <horizontal_alignment>1</horizontal_alignment>
         </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_164</name>
+          <pv_name>$(P)$(R)Ch$(N):ThermCpl_RBV</pv_name>
+          <y>20</y>
+          <width>20</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
       </widget>
       <widget type="group" version="3.0.0">
         <name>Ch23</name>
@@ -1613,7 +1833,6 @@
           <name>Label_49</name>
           <text>$(N)</text>
           <width>20</width>
-          <height>40</height>
           <horizontal_alignment>2</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
         </widget>
@@ -1640,6 +1859,17 @@
           </background_color>
           <horizontal_alignment>1</horizontal_alignment>
         </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_165</name>
+          <pv_name>$(P)$(R)Ch$(N):ThermCpl_RBV</pv_name>
+          <y>20</y>
+          <width>20</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
       </widget>
       <widget type="group" version="3.0.0">
         <name>Ch24</name>
@@ -1655,7 +1885,6 @@
           <name>Label_48</name>
           <text>$(N)</text>
           <width>20</width>
-          <height>40</height>
           <horizontal_alignment>2</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
         </widget>
@@ -1676,6 +1905,17 @@
           <x>25</x>
           <y>20</y>
           <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_166</name>
+          <pv_name>$(P)$(R)Ch$(N):ThermCpl_RBV</pv_name>
+          <y>20</y>
+          <width>20</width>
           <background_color>
             <color name="Background" red="255" green="255" blue="255">
             </color>
@@ -1714,7 +1954,6 @@
           <name>Label_51</name>
           <text>$(N)</text>
           <width>20</width>
-          <height>40</height>
           <horizontal_alignment>2</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
         </widget>
@@ -1741,6 +1980,17 @@
           </background_color>
           <horizontal_alignment>1</horizontal_alignment>
         </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_167</name>
+          <pv_name>$(P)$(R)Ch$(N):ThermCpl_RBV</pv_name>
+          <y>20</y>
+          <width>20</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
       </widget>
       <widget type="group" version="3.0.0">
         <name>Ch26</name>
@@ -1756,7 +2006,6 @@
           <name>Label_52</name>
           <text>$(N)</text>
           <width>20</width>
-          <height>40</height>
           <horizontal_alignment>2</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
         </widget>
@@ -1783,6 +2032,17 @@
           </background_color>
           <horizontal_alignment>1</horizontal_alignment>
         </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_168</name>
+          <pv_name>$(P)$(R)Ch$(N):ThermCpl_RBV</pv_name>
+          <y>20</y>
+          <width>20</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
       </widget>
       <widget type="group" version="3.0.0">
         <name>Ch27</name>
@@ -1798,7 +2058,6 @@
           <name>Label_54</name>
           <text>$(N)</text>
           <width>20</width>
-          <height>40</height>
           <horizontal_alignment>2</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
         </widget>
@@ -1825,6 +2084,17 @@
           </background_color>
           <horizontal_alignment>1</horizontal_alignment>
         </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_162</name>
+          <pv_name>$(P)$(R)Ch$(N):ThermCpl_RBV</pv_name>
+          <y>20</y>
+          <width>20</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
       </widget>
       <widget type="group" version="3.0.0">
         <name>Ch28</name>
@@ -1840,7 +2110,6 @@
           <name>Label_53</name>
           <text>$(N)</text>
           <width>20</width>
-          <height>40</height>
           <horizontal_alignment>2</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
         </widget>
@@ -1867,6 +2136,17 @@
           </background_color>
           <horizontal_alignment>1</horizontal_alignment>
         </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_184</name>
+          <pv_name>$(P)$(R)Ch$(N):ThermCpl_RBV</pv_name>
+          <y>20</y>
+          <width>20</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
       </widget>
       <widget type="group" version="3.0.0">
         <name>Ch29</name>
@@ -1882,7 +2162,6 @@
           <name>Label_55</name>
           <text>$(N)</text>
           <width>20</width>
-          <height>40</height>
           <horizontal_alignment>2</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
         </widget>
@@ -1909,6 +2188,17 @@
           </background_color>
           <horizontal_alignment>1</horizontal_alignment>
         </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_191</name>
+          <pv_name>$(P)$(R)Ch$(N):ThermCpl_RBV</pv_name>
+          <y>20</y>
+          <width>20</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
       </widget>
       <widget type="group" version="3.0.0">
         <name>Ch30</name>
@@ -1924,7 +2214,6 @@
           <name>Label_56</name>
           <text>$(N)</text>
           <width>20</width>
-          <height>40</height>
           <horizontal_alignment>2</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
         </widget>
@@ -1951,6 +2240,17 @@
           </background_color>
           <horizontal_alignment>1</horizontal_alignment>
         </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_198</name>
+          <pv_name>$(P)$(R)Ch$(N):ThermCpl_RBV</pv_name>
+          <y>20</y>
+          <width>20</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
       </widget>
       <widget type="group" version="3.0.0">
         <name>Ch31</name>
@@ -1966,7 +2266,6 @@
           <name>Label_59</name>
           <text>$(N)</text>
           <width>20</width>
-          <height>40</height>
           <horizontal_alignment>2</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
         </widget>
@@ -1993,6 +2292,17 @@
           </background_color>
           <horizontal_alignment>1</horizontal_alignment>
         </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_190</name>
+          <pv_name>$(P)$(R)Ch$(N):ThermCpl_RBV</pv_name>
+          <y>20</y>
+          <width>20</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
       </widget>
       <widget type="group" version="3.0.0">
         <name>Ch32</name>
@@ -2008,7 +2318,6 @@
           <name>Label_58</name>
           <text>$(N)</text>
           <width>20</width>
-          <height>40</height>
           <horizontal_alignment>2</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
         </widget>
@@ -2029,6 +2338,17 @@
           <x>25</x>
           <y>20</y>
           <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_181</name>
+          <pv_name>$(P)$(R)Ch$(N):ThermCpl_RBV</pv_name>
+          <y>20</y>
+          <width>20</width>
           <background_color>
             <color name="Background" red="255" green="255" blue="255">
             </color>
@@ -2067,7 +2387,6 @@
           <name>Label_61</name>
           <text>$(N)</text>
           <width>20</width>
-          <height>40</height>
           <horizontal_alignment>2</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
         </widget>
@@ -2094,6 +2413,17 @@
           </background_color>
           <horizontal_alignment>1</horizontal_alignment>
         </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_175</name>
+          <pv_name>$(P)$(R)Ch$(N):ThermCpl_RBV</pv_name>
+          <y>20</y>
+          <width>20</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
       </widget>
       <widget type="group" version="3.0.0">
         <name>Ch34</name>
@@ -2109,7 +2439,6 @@
           <name>Label_62</name>
           <text>$(N)</text>
           <width>20</width>
-          <height>40</height>
           <horizontal_alignment>2</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
         </widget>
@@ -2136,6 +2465,17 @@
           </background_color>
           <horizontal_alignment>1</horizontal_alignment>
         </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_177</name>
+          <pv_name>$(P)$(R)Ch$(N):ThermCpl_RBV</pv_name>
+          <y>20</y>
+          <width>20</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
       </widget>
       <widget type="group" version="3.0.0">
         <name>Ch35</name>
@@ -2151,7 +2491,6 @@
           <name>Label_64</name>
           <text>$(N)</text>
           <width>20</width>
-          <height>40</height>
           <horizontal_alignment>2</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
         </widget>
@@ -2178,6 +2517,17 @@
           </background_color>
           <horizontal_alignment>1</horizontal_alignment>
         </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_169</name>
+          <pv_name>$(P)$(R)Ch$(N):ThermCpl_RBV</pv_name>
+          <y>20</y>
+          <width>20</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
       </widget>
       <widget type="group" version="3.0.0">
         <name>Ch36</name>
@@ -2193,7 +2543,6 @@
           <name>Label_63</name>
           <text>$(N)</text>
           <width>20</width>
-          <height>40</height>
           <horizontal_alignment>2</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
         </widget>
@@ -2220,6 +2569,17 @@
           </background_color>
           <horizontal_alignment>1</horizontal_alignment>
         </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_171</name>
+          <pv_name>$(P)$(R)Ch$(N):ThermCpl_RBV</pv_name>
+          <y>20</y>
+          <width>20</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
       </widget>
       <widget type="group" version="3.0.0">
         <name>Ch37</name>
@@ -2235,7 +2595,6 @@
           <name>Label_65</name>
           <text>$(N)</text>
           <width>20</width>
-          <height>40</height>
           <horizontal_alignment>2</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
         </widget>
@@ -2262,6 +2621,17 @@
           </background_color>
           <horizontal_alignment>1</horizontal_alignment>
         </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_180</name>
+          <pv_name>$(P)$(R)Ch$(N):ThermCpl_RBV</pv_name>
+          <y>20</y>
+          <width>20</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
       </widget>
       <widget type="group" version="3.0.0">
         <name>Ch38</name>
@@ -2277,7 +2647,6 @@
           <name>Label_66</name>
           <text>$(N)</text>
           <width>20</width>
-          <height>40</height>
           <horizontal_alignment>2</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
         </widget>
@@ -2304,6 +2673,17 @@
           </background_color>
           <horizontal_alignment>1</horizontal_alignment>
         </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_189</name>
+          <pv_name>$(P)$(R)Ch$(N):ThermCpl_RBV</pv_name>
+          <y>20</y>
+          <width>20</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
       </widget>
       <widget type="group" version="3.0.0">
         <name>Ch39</name>
@@ -2319,7 +2699,6 @@
           <name>Label_68</name>
           <text>$(N)</text>
           <width>20</width>
-          <height>40</height>
           <horizontal_alignment>2</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
         </widget>
@@ -2346,6 +2725,17 @@
           </background_color>
           <horizontal_alignment>1</horizontal_alignment>
         </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_206</name>
+          <pv_name>$(P)$(R)Ch$(N):ThermCpl_RBV</pv_name>
+          <y>20</y>
+          <width>20</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
       </widget>
       <widget type="group" version="3.0.0">
         <name>Ch40</name>
@@ -2361,7 +2751,6 @@
           <name>Label_67</name>
           <text>$(N)</text>
           <width>20</width>
-          <height>40</height>
           <horizontal_alignment>2</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
         </widget>
@@ -2382,6 +2771,17 @@
           <x>25</x>
           <y>20</y>
           <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_188</name>
+          <pv_name>$(P)$(R)Ch$(N):ThermCpl_RBV</pv_name>
+          <y>20</y>
+          <width>20</width>
           <background_color>
             <color name="Background" red="255" green="255" blue="255">
             </color>
@@ -2420,7 +2820,6 @@
           <name>Label_70</name>
           <text>$(N)</text>
           <width>20</width>
-          <height>40</height>
           <horizontal_alignment>2</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
         </widget>
@@ -2447,6 +2846,17 @@
           </background_color>
           <horizontal_alignment>1</horizontal_alignment>
         </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_176</name>
+          <pv_name>$(P)$(R)Ch$(N):ThermCpl_RBV</pv_name>
+          <y>20</y>
+          <width>20</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
       </widget>
       <widget type="group" version="3.0.0">
         <name>Ch42</name>
@@ -2462,7 +2872,6 @@
           <name>Label_71</name>
           <text>$(N)</text>
           <width>20</width>
-          <height>40</height>
           <horizontal_alignment>2</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
         </widget>
@@ -2489,6 +2898,17 @@
           </background_color>
           <horizontal_alignment>1</horizontal_alignment>
         </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_178</name>
+          <pv_name>$(P)$(R)Ch$(N):ThermCpl_RBV</pv_name>
+          <y>20</y>
+          <width>20</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
       </widget>
       <widget type="group" version="3.0.0">
         <name>Ch43</name>
@@ -2504,7 +2924,6 @@
           <name>Label_73</name>
           <text>$(N)</text>
           <width>20</width>
-          <height>40</height>
           <horizontal_alignment>2</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
         </widget>
@@ -2531,6 +2950,17 @@
           </background_color>
           <horizontal_alignment>1</horizontal_alignment>
         </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_200</name>
+          <pv_name>$(P)$(R)Ch$(N):ThermCpl_RBV</pv_name>
+          <y>20</y>
+          <width>20</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
       </widget>
       <widget type="group" version="3.0.0">
         <name>Ch44</name>
@@ -2546,7 +2976,6 @@
           <name>Label_72</name>
           <text>$(N)</text>
           <width>20</width>
-          <height>40</height>
           <horizontal_alignment>2</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
         </widget>
@@ -2573,6 +3002,17 @@
           </background_color>
           <horizontal_alignment>1</horizontal_alignment>
         </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_172</name>
+          <pv_name>$(P)$(R)Ch$(N):ThermCpl_RBV</pv_name>
+          <y>20</y>
+          <width>20</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
       </widget>
       <widget type="group" version="3.0.0">
         <name>Ch45</name>
@@ -2588,7 +3028,6 @@
           <name>Label_74</name>
           <text>$(N)</text>
           <width>20</width>
-          <height>40</height>
           <horizontal_alignment>2</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
         </widget>
@@ -2615,6 +3054,17 @@
           </background_color>
           <horizontal_alignment>1</horizontal_alignment>
         </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_179</name>
+          <pv_name>$(P)$(R)Ch$(N):ThermCpl_RBV</pv_name>
+          <y>20</y>
+          <width>20</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
       </widget>
       <widget type="group" version="3.0.0">
         <name>Ch46</name>
@@ -2630,7 +3080,6 @@
           <name>Label_75</name>
           <text>$(N)</text>
           <width>20</width>
-          <height>40</height>
           <horizontal_alignment>2</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
         </widget>
@@ -2657,6 +3106,17 @@
           </background_color>
           <horizontal_alignment>1</horizontal_alignment>
         </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_211</name>
+          <pv_name>$(P)$(R)Ch$(N):ThermCpl_RBV</pv_name>
+          <y>20</y>
+          <width>20</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
       </widget>
       <widget type="group" version="3.0.0">
         <name>Ch47</name>
@@ -2672,7 +3132,6 @@
           <name>Label_77</name>
           <text>$(N)</text>
           <width>20</width>
-          <height>40</height>
           <horizontal_alignment>2</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
         </widget>
@@ -2699,6 +3158,17 @@
           </background_color>
           <horizontal_alignment>1</horizontal_alignment>
         </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_214</name>
+          <pv_name>$(P)$(R)Ch$(N):ThermCpl_RBV</pv_name>
+          <y>20</y>
+          <width>20</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
       </widget>
       <widget type="group" version="3.0.0">
         <name>Ch48</name>
@@ -2714,7 +3184,6 @@
           <name>Label_76</name>
           <text>$(N)</text>
           <width>20</width>
-          <height>40</height>
           <horizontal_alignment>2</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
         </widget>
@@ -2735,6 +3204,17 @@
           <x>25</x>
           <y>20</y>
           <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_197</name>
+          <pv_name>$(P)$(R)Ch$(N):ThermCpl_RBV</pv_name>
+          <y>20</y>
+          <width>20</width>
           <background_color>
             <color name="Background" red="255" green="255" blue="255">
             </color>
@@ -2773,7 +3253,6 @@
           <name>Label_79</name>
           <text>$(N)</text>
           <width>20</width>
-          <height>40</height>
           <horizontal_alignment>2</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
         </widget>
@@ -2800,6 +3279,17 @@
           </background_color>
           <horizontal_alignment>1</horizontal_alignment>
         </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_183</name>
+          <pv_name>$(P)$(R)Ch$(N):ThermCpl_RBV</pv_name>
+          <y>20</y>
+          <width>20</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
       </widget>
       <widget type="group" version="3.0.0">
         <name>Ch50</name>
@@ -2815,7 +3305,6 @@
           <name>Label_80</name>
           <text>$(N)</text>
           <width>20</width>
-          <height>40</height>
           <horizontal_alignment>2</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
         </widget>
@@ -2842,6 +3331,17 @@
           </background_color>
           <horizontal_alignment>1</horizontal_alignment>
         </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_186</name>
+          <pv_name>$(P)$(R)Ch$(N):ThermCpl_RBV</pv_name>
+          <y>20</y>
+          <width>20</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
       </widget>
       <widget type="group" version="3.0.0">
         <name>Ch51</name>
@@ -2857,7 +3357,6 @@
           <name>Label_82</name>
           <text>$(N)</text>
           <width>20</width>
-          <height>40</height>
           <horizontal_alignment>2</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
         </widget>
@@ -2884,6 +3383,17 @@
           </background_color>
           <horizontal_alignment>1</horizontal_alignment>
         </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_201</name>
+          <pv_name>$(P)$(R)Ch$(N):ThermCpl_RBV</pv_name>
+          <y>20</y>
+          <width>20</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
       </widget>
       <widget type="group" version="3.0.0">
         <name>Ch52</name>
@@ -2899,7 +3409,6 @@
           <name>Label_81</name>
           <text>$(N)</text>
           <width>20</width>
-          <height>40</height>
           <horizontal_alignment>2</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
         </widget>
@@ -2926,6 +3435,17 @@
           </background_color>
           <horizontal_alignment>1</horizontal_alignment>
         </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_173</name>
+          <pv_name>$(P)$(R)Ch$(N):ThermCpl_RBV</pv_name>
+          <y>20</y>
+          <width>20</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
       </widget>
       <widget type="group" version="3.0.0">
         <name>Ch53</name>
@@ -2941,7 +3461,6 @@
           <name>Label_83</name>
           <text>$(N)</text>
           <width>20</width>
-          <height>40</height>
           <horizontal_alignment>2</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
         </widget>
@@ -2968,6 +3487,17 @@
           </background_color>
           <horizontal_alignment>1</horizontal_alignment>
         </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_182</name>
+          <pv_name>$(P)$(R)Ch$(N):ThermCpl_RBV</pv_name>
+          <y>20</y>
+          <width>20</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
       </widget>
       <widget type="group" version="3.0.0">
         <name>Ch54</name>
@@ -2983,7 +3513,6 @@
           <name>Label_84</name>
           <text>$(N)</text>
           <width>20</width>
-          <height>40</height>
           <horizontal_alignment>2</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
         </widget>
@@ -3010,6 +3539,17 @@
           </background_color>
           <horizontal_alignment>1</horizontal_alignment>
         </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_205</name>
+          <pv_name>$(P)$(R)Ch$(N):ThermCpl_RBV</pv_name>
+          <y>20</y>
+          <width>20</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
       </widget>
       <widget type="group" version="3.0.0">
         <name>Ch55</name>
@@ -3025,7 +3565,6 @@
           <name>Label_86</name>
           <text>$(N)</text>
           <width>20</width>
-          <height>40</height>
           <horizontal_alignment>2</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
         </widget>
@@ -3052,6 +3591,17 @@
           </background_color>
           <horizontal_alignment>1</horizontal_alignment>
         </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_196</name>
+          <pv_name>$(P)$(R)Ch$(N):ThermCpl_RBV</pv_name>
+          <y>20</y>
+          <width>20</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
       </widget>
       <widget type="group" version="3.0.0">
         <name>Ch56</name>
@@ -3067,7 +3617,6 @@
           <name>Label_85</name>
           <text>$(N)</text>
           <width>20</width>
-          <height>40</height>
           <horizontal_alignment>2</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
         </widget>
@@ -3088,6 +3637,17 @@
           <x>25</x>
           <y>20</y>
           <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_204</name>
+          <pv_name>$(P)$(R)Ch$(N):ThermCpl_RBV</pv_name>
+          <y>20</y>
+          <width>20</width>
           <background_color>
             <color name="Background" red="255" green="255" blue="255">
             </color>
@@ -3126,7 +3686,6 @@
           <name>Label_88</name>
           <text>$(N)</text>
           <width>20</width>
-          <height>40</height>
           <horizontal_alignment>2</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
         </widget>
@@ -3153,6 +3712,17 @@
           </background_color>
           <horizontal_alignment>1</horizontal_alignment>
         </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_199</name>
+          <pv_name>$(P)$(R)Ch$(N):ThermCpl_RBV</pv_name>
+          <y>20</y>
+          <width>20</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
       </widget>
       <widget type="group" version="3.0.0">
         <name>Ch58</name>
@@ -3168,7 +3738,6 @@
           <name>Label_89</name>
           <text>$(N)</text>
           <width>20</width>
-          <height>40</height>
           <horizontal_alignment>2</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
         </widget>
@@ -3195,6 +3764,17 @@
           </background_color>
           <horizontal_alignment>1</horizontal_alignment>
         </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_185</name>
+          <pv_name>$(P)$(R)Ch$(N):ThermCpl_RBV</pv_name>
+          <y>20</y>
+          <width>20</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
       </widget>
       <widget type="group" version="3.0.0">
         <name>Ch59</name>
@@ -3210,7 +3790,6 @@
           <name>Label_91</name>
           <text>$(N)</text>
           <width>20</width>
-          <height>40</height>
           <horizontal_alignment>2</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
         </widget>
@@ -3237,6 +3816,17 @@
           </background_color>
           <horizontal_alignment>1</horizontal_alignment>
         </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_202</name>
+          <pv_name>$(P)$(R)Ch$(N):ThermCpl_RBV</pv_name>
+          <y>20</y>
+          <width>20</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
       </widget>
       <widget type="group" version="3.0.0">
         <name>Ch60</name>
@@ -3252,7 +3842,6 @@
           <name>Label_90</name>
           <text>$(N)</text>
           <width>20</width>
-          <height>40</height>
           <horizontal_alignment>2</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
         </widget>
@@ -3279,6 +3868,17 @@
           </background_color>
           <horizontal_alignment>1</horizontal_alignment>
         </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_174</name>
+          <pv_name>$(P)$(R)Ch$(N):ThermCpl_RBV</pv_name>
+          <y>20</y>
+          <width>20</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
       </widget>
       <widget type="group" version="3.0.0">
         <name>Ch61</name>
@@ -3294,7 +3894,6 @@
           <name>Label_92</name>
           <text>$(N)</text>
           <width>20</width>
-          <height>40</height>
           <horizontal_alignment>2</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
         </widget>
@@ -3321,6 +3920,17 @@
           </background_color>
           <horizontal_alignment>1</horizontal_alignment>
         </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_187</name>
+          <pv_name>$(P)$(R)Ch$(N):ThermCpl_RBV</pv_name>
+          <y>20</y>
+          <width>20</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
       </widget>
       <widget type="group" version="3.0.0">
         <name>Ch62</name>
@@ -3336,7 +3946,6 @@
           <name>Label_93</name>
           <text>$(N)</text>
           <width>20</width>
-          <height>40</height>
           <horizontal_alignment>2</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
         </widget>
@@ -3363,6 +3972,17 @@
           </background_color>
           <horizontal_alignment>1</horizontal_alignment>
         </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_213</name>
+          <pv_name>$(P)$(R)Ch$(N):ThermCpl_RBV</pv_name>
+          <y>20</y>
+          <width>20</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
       </widget>
       <widget type="group" version="3.0.0">
         <name>Ch63</name>
@@ -3378,7 +3998,6 @@
           <name>Label_95</name>
           <text>$(N)</text>
           <width>20</width>
-          <height>40</height>
           <horizontal_alignment>2</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
         </widget>
@@ -3405,6 +4024,17 @@
           </background_color>
           <horizontal_alignment>1</horizontal_alignment>
         </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_203</name>
+          <pv_name>$(P)$(R)Ch$(N):ThermCpl_RBV</pv_name>
+          <y>20</y>
+          <width>20</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
       </widget>
       <widget type="group" version="3.0.0">
         <name>Ch64</name>
@@ -3420,7 +4050,6 @@
           <name>Label_94</name>
           <text>$(N)</text>
           <width>20</width>
-          <height>40</height>
           <horizontal_alignment>2</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
         </widget>
@@ -3441,6 +4070,17 @@
           <x>25</x>
           <y>20</y>
           <width>75</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_195</name>
+          <pv_name>$(P)$(R)Ch$(N):ThermCpl_RBV</pv_name>
+          <y>20</y>
+          <width>20</width>
           <background_color>
             <color name="Background" red="255" green="255" blue="255">
             </color>

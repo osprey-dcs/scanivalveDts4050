@@ -18,7 +18,8 @@ setIntVar {
 
 startScan {
     out "SET FORMAT 0";
-    out "SET TIME 1";
+    out "SET TIME 2";
+    out "SET BIN 0";
     out "SCAN";
 }
 
@@ -27,7 +28,7 @@ getScanFrameNum {
 }
 
 getScanFrameTimeStamp {
-    in "Time %d us";
+    in "Time %d ms";
 }
 
 getScanRtdTemp {
@@ -44,7 +45,7 @@ getScanChTemp {
 }
 
 getScanChStatus {
-    in "\$1 %*f %s";
+    in "\$1 %*f %x";
 }
 
 sendCommand {

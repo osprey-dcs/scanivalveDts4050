@@ -25,6 +25,13 @@ set_savefile_path("$(AS_PATH)")
 
 iocInit()
 
+# Force any ongoing scan to stop
+dbpf $(PREFIX)StopScan 1
+
+# Force a scan of Version and Status
+dbpf $(PREFIX)Version.PROC 1
+dbpf $(PREFIX)Status.PROC 1
+
 save_restoreSet_Debug(0)
 makeAutosaveFileFromDbInfo("$(AS_PATH)/info_settings.req", "autosaveFields")
 create_monitor_set("info_settings.req", 30, "")

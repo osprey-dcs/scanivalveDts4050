@@ -102,7 +102,7 @@ record(longin, "$(P)$(R)ScanFrameTime_RBV") {
     field(SCAN, "I/O Intr")
     field(DTYP, "stream")
     field(INP,  "@scanivalveDts4050.proto getScanFrameTimeStamp() $(PORT)")
-    field(EGU,  "us")
+    field(EGU,  "ms")
 }
 
 record(stringin, "$(P)$(R)ScanUnits_RBV") {
