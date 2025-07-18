@@ -11,7 +11,7 @@ epicsEnvSet("AS_PATH", "$(TOP)/iocBoot/$(IOC)/autosave")
 dbLoadDatabase("$(TOP)/dbd/scanivalveDts4050.dbd")
 scanivalveDts4050_registerRecordDeviceDriver(pdbbase)
 
-drvAsynIPPortConfigure("$(PORT)", "localhost:2323")
+drvAsynIPPortConfigure("$(PORT)", "192.168.79.33:23")
 
 # Debug flags
 #asynSetTraceMask("$(PORT)", 0, device|driver)
@@ -31,6 +31,11 @@ dbpf $(PREFIX)StopScan 1
 # Force a scan of Version and Status
 dbpf $(PREFIX)Version.PROC 1
 dbpf $(PREFIX)Status.PROC 1
+dbpf $(PREFIX)Status.SCAN "1 second"
+
+# Set a default avg and trig div
+dbpf $(PREFIX)Average 1
+dbpf $(PREFIX)ExtTriggerDiv 10
 
 save_restoreSet_Debug(0)
 makeAutosaveFileFromDbInfo("$(AS_PATH)/info_settings.req", "autosaveFields")

@@ -31,9 +31,15 @@
 
 # If using the sequencer, point SNCSEQ at its top directory:
 #SNCSEQ = $(MODULES)/seq-ver
+#
+SUPPORT=/home/domitto/build-epics
+ASYN=$(SUPPORT)/asyn
+AUTOSAVE=$(SUPPORT)/autosave
+CALC=$(SUPPORT)/calc
+STREAM=$(SUPPORT)/stream
 
 # EPICS_BASE should appear last so earlier modules can override stuff:
-EPICS_BASE = /home/bmartins/osprey/epics/epics-base
+EPICS_BASE = /home/domitto/build-epics/epics-base
 
 # Set RULES here if you want to use build rules from somewhere
 # other than EPICS_BASE:
