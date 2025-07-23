@@ -16,7 +16,7 @@ $(PROD_IOC)_LIBS += asyn
 $(PROD_IOC)_LIBS += autosave
 $(PROD_IOC)_LIBS += calc
 $(PROD_IOC)_LIBS += stream
-$(PROD_IOC)_DBD += reccaster
+$(PROD_IOC)_LIBS += reccaster
 
 $(PROD_IOC)_SRCS += $(PROD_IOC)_registerRecordDeviceDriver.cpp
 $(PROD_IOC)_SRCS += $(PROD_IOC)Main.cpp

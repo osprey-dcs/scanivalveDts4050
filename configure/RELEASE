@@ -37,7 +37,7 @@ ASYN=$(SUPPORT)/asyn
 AUTOSAVE=$(SUPPORT)/autosave
 CALC=$(SUPPORT)/calc
 STREAM=$(SUPPORT)/stream
-RECSYNC=$(SUPPORT)/recsync
+RECSYNC=$(SUPPORT)/recsync/client
 
 # EPICS_BASE should appear last so earlier modules can override stuff:
 EPICS_BASE = /usr/local/epics/epics-base
