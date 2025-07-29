@@ -3,7 +3,7 @@
 < envPaths
 
 epicsEnvSet("STREAM_PROTOCOL_PATH", ".:$(TOP)/proto")
-epicsEnvSet("PREFIX", "SVDTS4050:")
+epicsEnvSet("PREFIX", "MDAS:SVDTS4050:")
 epicsEnvSet("PORT", "P0")
 
 epicsEnvSet("AS_PATH", "$(TOP)/iocBoot/$(IOC)/autosave")

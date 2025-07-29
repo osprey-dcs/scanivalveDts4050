@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-07-17 23:11:16 by bmartins-->
+<!--Saved on 2025-07-29 07:07:38 by atf-->
 <display version="2.0.0">
   <name>Scanivalve DTS4050 - $(P)$(R)</name>
   <macros>
-    <P>SVDTS4050:</P>
-    <R></R>
+    <P>MDAS:</P>
+    <R>SVDTS4050:</R>
   </macros>
   <width>990</width>
   <height>650</height>
@@ -314,6 +314,13 @@
           </color>
         </border_color>
       </widget>
+    </widget>
+    <widget type="picture" version="2.0.0">
+      <name>Picture</name>
+      <file>osprey-logo.png</file>
+      <x>532</x>
+      <width>76</width>
+      <height>90</height>
     </widget>
   </widget>
   <widget type="group" version="3.0.0">
